@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Peter Cline | Cline Digital Growth</title>
+<meta name="description" content="Peter Cline is a digital growth consultant with 11+ years of marketing experience including 7 years of enterprise analytics, CRO, and UX consulting for Fortune 100 companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--charcoal:#1a1a1a;--offwhite:#f8f7f4;--navy:#0f2040;--sage:#4a7c59;--sage-dark:#3c6649;--warmwhite:#fffdf9;--ink:#1a1a1a;--muted:#4a4a46;--line:#dedcd5}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{font-family:'Inter',system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.05}
+  h2{line-height:1.1;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);display:inline-block;margin-bottom:1.4rem}
+  .eyebrow.light{color:#9ab8a4}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .2s ease,box-shadow .2s ease,padding .35s ease;padding:22px 0}
+  nav.scrolled{background:var(--warmwhite);box-shadow:0 1px 0 var(--line);padding:14px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;transition:color .2s ease;letter-spacing:.01em}
+  nav.scrolled .brand{color:var(--charcoal)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);transition:color .2s ease}
+  nav.scrolled .nav-links a{color:var(--charcoal)}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--sage)}
+  nav.scrolled .nav-links a[aria-current="page"]{color:var(--sage)}
+  .nav-cta{background:var(--sage);color:#fff !important;padding:10px 20px;border-radius:2px;font-weight:500}
+  .nav-cta:hover{background:var(--sage-dark) !important}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
+  .nav-toggle span{width:24px;height:2px;background:#fff;transition:background .2s}
+  nav.scrolled .nav-toggle span{background:var(--charcoal)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.02em;cursor:pointer;border:1px solid transparent;text-decoration:none}
+  .btn-primary{background:var(--sage);color:#fff;padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
+  .btn-primary:hover{background:var(--sage-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,124,89,.3)}
+  .btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
+  .btn-secondary:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06)}
+  .about-hero{background:var(--charcoal);color:#fff;padding:160px 0 0;position:relative;overflow:hidden}
+  .about-hero::before{content:"";position:absolute;top:-60px;right:-60px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle at center,rgba(74,124,89,.2),transparent 65%)}
+  .ah-layout{display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:end;position:relative;z-index:2}
+  .ah-text{padding-bottom:72px}
+  .ah-text h1{font-size:clamp(3rem,7.5vw,6rem);letter-spacing:-.02em;line-height:.96}
+  .ah-text h1 .sub-name{display:block;font-size:clamp(1.4rem,3vw,2.2rem);color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.3em}
+  .ah-lead{margin-top:2rem;font-size:1.1rem;color:rgba(255,255,255,.72);max-width:48ch;line-height:1.72}
+  .ah-photo-col{align-self:end}
+  .ah-photo{width:100%;aspect-ratio:3/4;background:var(--navy);position:relative;overflow:hidden}
+  .ah-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,124,89,.3) 0%,rgba(15,32,64,.6) 100%)}
+  .ah-photo-initials{position:absolute;bottom:28px;left:28px;font-family:'DM Serif Display',serif;font-size:4.5rem;color:rgba(255,255,255,.14);line-height:1;letter-spacing:-.04em}
+  .ah-photo-label{position:absolute;bottom:24px;right:24px;text-align:right}
+  .ah-photo-label .name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#fff}
+  .ah-photo-label .title{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
+  section{padding:96px 0}
+  .sec-head{max-width:58ch;margin-bottom:3rem}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+  .sec-head p{margin-top:1.2rem;color:var(--muted);font-size:1.04rem;max-width:54ch;line-height:1.7}
+  .bio-section{background:var(--warmwhite)}
+  .bio-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .bio-col h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:2rem}
+  .bio-col p{font-size:1.04rem;color:var(--muted);line-height:1.8;margin-bottom:1.4rem;max-width:52ch}
+  .bio-col p:last-of-type{margin-bottom:0}
+  .bio-quote{padding:32px 0 32px 24px;border-left:3px solid var(--sage);margin:2.4rem 0}
+  .bio-quote blockquote{font-family:'DM Serif Display',serif;font-size:1.45rem;color:var(--ink);line-height:1.35;font-style:italic}
+  .bio-quote cite{display:block;margin-top:12px;font-size:.82rem;font-style:normal;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .bio-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+  .bio-stat{padding:28px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .bio-stat:nth-child(2n){border-right:0}
+  .bio-stat:nth-last-child(-n+2){border-bottom:0}
+  .bio-stat .n{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--sage);line-height:1;margin-bottom:6px;letter-spacing:-.02em}
+  .bio-stat .d{font-size:.82rem;color:var(--muted);line-height:1.5;letter-spacing:.02em}
+  .expertise-section{background:var(--charcoal);color:#fff}
+  .expertise-section .sec-head h2{color:#fff}
+  .expertise-section .sec-head p{color:rgba(255,255,255,.65)}
+  .exp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.12)}
+  .exp-block{padding:36px 32px 36px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .exp-block:nth-child(3n){padding-right:0}
+  .exp-block:nth-child(3n-1),.exp-block:nth-child(3n-2){padding-right:32px;border-right:1px solid rgba(255,255,255,.12)}
+  .exp-block h3{font-size:1.2rem;color:#fff;margin-bottom:16px}
+  .exp-block ul{display:flex;flex-direction:column;gap:6px}
+  .exp-block ul li{font-size:.86rem;color:rgba(255,255,255,.62);display:flex;gap:10px;align-items:flex-start}
+  .exp-block ul li::before{content:"";flex:0 0 auto;width:5px;height:5px;background:var(--sage);border-radius:50%;margin-top:.52em}
+  .platforms-section{background:var(--navy);color:#fff}
+  .platforms-section .sec-head h2{color:#fff}
+  .platforms-section .sec-head p{color:rgba(255,255,255,.65)}
+  .platform-cats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px 48px}
+  .platform-cat h4{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:14px}
+  .ptag-list{display:flex;flex-wrap:wrap;gap:8px}
+  .ptag{font-size:.82rem;border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:2px;color:rgba(255,255,255,.8)}
+  .clients-section{background:#f4f2ee}
+  .clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .client-type{padding:24px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .client-type h4{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:8px}
+  .client-type p{font-size:.8rem;color:var(--muted);line-height:1.5}
+  .philosophy-section{background:var(--warmwhite)}
+  .phil-layout{max-width:820px}
+  .phil-layout h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:2.4rem}
+  .phil-points{display:flex;flex-direction:column;gap:0}
+  .phil-point{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .phil-point:first-child{border-top:1px solid var(--line)}
+  .phil-n{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--sage);line-height:1}
+  .phil-text h3{font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:6px}
+  .phil-text p{font-size:.92rem;color:var(--muted);line-height:1.7;max-width:56ch}
+  .final{background:var(--charcoal);color:#fff;text-align:center;position:relative;overflow:hidden;padding:110px 0}
+  .final::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,89,.2),transparent 62%)}
+  .final-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+  .final p{margin-top:1.4rem;color:rgba(255,255,255,.7);font-size:1.04rem;line-height:1.7}
+  .final-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:2.4rem}
+  footer{background:var(--navy);color:#fff;padding:64px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:42px}
+  .foot-brand{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:12px}
+  .foot-grid p{color:rgba(255,255,255,.65);font-size:.9rem;max-width:34ch;line-height:1.65}
+  .foot-grid h4{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:14px}
+  .foot-grid ul li{margin-bottom:9px}
+  .foot-grid ul li a{color:rgba(255,255,255,.75);font-size:.9rem;transition:color .2s}
+  .foot-grid ul li a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;font-size:.8rem;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:980px){
+    .ah-layout{grid-template-columns:1fr;gap:0}.ah-photo-col{display:none}.ah-text{padding-bottom:80px}
+    .bio-layout{grid-template-columns:1fr;gap:48px}
+    .exp-grid{grid-template-columns:1fr 1fr}
+    .exp-block:nth-child(3n){padding-right:32px;border-right:1px solid rgba(255,255,255,.12)}
+    .exp-block:nth-child(2n){padding-right:0;border-right:0}
+    .platform-cats{grid-template-columns:1fr 1fr}
+    .clients-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:767px){
+    .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;background:var(--charcoal);flex-direction:column;align-items:flex-start;padding:96px 32px;gap:26px;transform:translateX(100%);transition:transform .35s ease;z-index:99}
+    .nav-links.open{transform:none}
+    .nav-links a{color:#fff !important;font-size:1.05rem}
+    .nav-toggle{display:flex;z-index:101}
+    .exp-grid{grid-template-columns:1fr}
+    .platform-cats{grid-template-columns:1fr}
+    .clients-grid{grid-template-columns:1fr 1fr}
+    .bio-stats{grid-template-columns:1fr 1fr}
+    section{padding:64px 0}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:28px}
+  }
+  @media(max-width:480px){.clients-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a href="/" class="brand">Cline Digital Growth</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/about" aria-current="page">About</a></li>
+      <li><a class="nav-cta" href="mailto:hello@example.com">Book an Audit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <div class="wrap ah-layout">
+    <div class="ah-text">
+      <span class="eyebrow light">About</span>
+      <h1><span class="sub-name">Peter Cline</span>Digital Growth Consultant</h1>
+      <p class="ah-lead">Over a decade of marketing experience. Seven years building analytics, experimentation, and conversion programs for Fortune 100 companies. Now applying that same rigorous thinking to businesses that deserve it.</p>
+    </div>
+    <div class="ah-photo-col">
+      <div class="ah-photo">
+        <div class="ah-photo-initials">PC</div>
+        <div class="ah-photo-label"><div class="name">Peter Cline</div><div class="title">Digital Growth Consultant</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="bio-section reveal">
+  <div class="wrap bio-layout">
+    <div class="bio-col">
+      <h2>The Background</h2>
+      <p>I spent the first part of my career inside enterprise digital analytics &mdash; working with some of the largest companies in the world to measure, understand, and improve their digital experiences. That meant building GA and GA360 implementations, designing A/B testing programs, creating CRO roadmaps, building executive dashboards, and doing the kind of deep UX analysis that changes how organizations make decisions.</p>
+      <p>The work was meaningful, but it was also inaccessible. The enterprise model &mdash; with its contracts, overhead, and specialized teams &mdash; meant that smaller businesses never got access to that level of thinking.</p>
+      <div class="bio-quote">
+        <blockquote>Every small business deserves to know where their customers are coming from, what makes them convert, and what to fix first.</blockquote>
+        <cite>&mdash; Peter Cline</cite>
+      </div>
+      <p>Cline Digital Growth is how I make that accessible. Same strategic rigor. Same analytical discipline. Different pricing model.</p>
+    </div>
+    <div>
+      <div class="bio-stats">
+        <div class="bio-stat"><div class="n">11+</div><div class="d">Years of marketing and digital strategy experience</div></div>
+        <div class="bio-stat"><div class="n">7</div><div class="d">Years enterprise analytics, CRO, and insights consulting</div></div>
+        <div class="bio-stat"><div class="n">F100</div><div class="d">Fortune 100 clients served across multiple industries</div></div>
+        <div class="bio-stat"><div class="n">6</div><div class="d">Service areas from local SEO to AI marketing systems</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="expertise-section reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow light">Core Expertise</span><h2>Where the Experience Runs Deep</h2><p>Each of these areas reflects genuine, hands-on experience &mdash; not generalist advice pulled from a playbook.</p></div>
+    <div class="exp-grid">
+      <div class="exp-block"><h3>Digital Analytics</h3><ul><li>GA4 and Google Analytics 360 implementation</li><li>Google Tag Manager architecture</li><li>Conversion and event tracking strategy</li><li>UTM frameworks and source attribution</li><li>Looker Studio dashboards and reporting</li><li>Analytics audits and data governance</li></ul></div>
+      <div class="exp-block"><h3>CRO &amp; Experimentation</h3><ul><li>A/B and multivariate test design</li><li>Optimizely, VWO, and Adobe Target</li><li>Conversion funnel analysis</li><li>Session recording and heatmap analysis</li><li>CRO roadmap development</li><li>Executive readouts and stakeholder reporting</li></ul></div>
+      <div class="exp-block"><h3>UX / UI Design</h3><ul><li>UX audits and heuristic evaluation</li><li>Wireframes and interaction design</li><li>Figma prototyping and design systems</li><li>Landing page and conversion design</li><li>Mobile-first layout design</li><li>Front-end-ready design handoff</li></ul></div>
+      <div class="exp-block"><h3>SEO &amp; Search Strategy</h3><ul><li>Local SEO and Google Business Profile</li><li>Keyword research and content strategy</li><li>Answer Engine Optimization (AEO)</li><li>Technical SEO fundamentals</li><li>Search Console and rank tracking</li><li>Competitive search analysis</li></ul></div>
+      <div class="exp-block"><h3>Paid Media &amp; Campaigns</h3><ul><li>Google Ads campaign structure and setup</li><li>Meta Ads strategy and pixel setup</li><li>Landing page strategy for paid traffic</li><li>Ad copy development</li><li>Audience segmentation and targeting</li><li>Campaign performance dashboards</li></ul></div>
+      <div class="exp-block"><h3>AI Marketing Systems</h3><ul><li>AI workflow design and documentation</li><li>Prompt engineering for marketing use cases</li><li>Content calendar and SEO brief automation</li><li>Brand voice development for AI tools</li><li>Review and competitive intelligence</li><li>Repeatable go-to-market workflows</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="platforms-section reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow light">Platforms &amp; Tools</span><h2>Worked With at an Expert Level</h2><p>These are the tools used on real enterprise and small business engagements &mdash; not vendor certifications collected for a resume.</p></div>
+    <div class="platform-cats">
+      <div class="platform-cat"><h4>Analytics</h4><div class="ptag-list"><span class="ptag">Google Analytics 4</span><span class="ptag">Google Analytics 360</span><span class="ptag">Google Tag Manager</span><span class="ptag">Google Search Console</span><span class="ptag">Looker Studio</span></div></div>
+      <div class="platform-cat"><h4>CRO &amp; UX Research</h4><div class="ptag-list"><span class="ptag">Optimizely</span><span class="ptag">VWO</span><span class="ptag">Adobe Target</span><span class="ptag">Contentsquare</span><span class="ptag">Hotjar</span><span class="ptag">Microsoft Clarity</span></div></div>
+      <div class="platform-cat"><h4>Design</h4><div class="ptag-list"><span class="ptag">Figma</span><span class="ptag">Figma Prototyping</span><span class="ptag">Design Systems</span><span class="ptag">Wireframing</span></div></div>
+      <div class="platform-cat"><h4>Paid Media &amp; SEO</h4><div class="ptag-list"><span class="ptag">Google Ads</span><span class="ptag">Meta Ads Manager</span><span class="ptag">Google Business Profile</span><span class="ptag">Semrush</span><span class="ptag">Ahrefs</span></div></div>
+      <div class="platform-cat"><h4>AI &amp; Automation</h4><div class="ptag-list"><span class="ptag">Claude</span><span class="ptag">ChatGPT</span><span class="ptag">Perplexity</span><span class="ptag">AI workflow design</span><span class="ptag">Prompt engineering</span></div></div>
+      <div class="platform-cat"><h4>Dashboards &amp; Reporting</h4><div class="ptag-list"><span class="ptag">Looker Studio</span><span class="ptag">Executive reporting</span><span class="ptag">Funnel analysis</span><span class="ptag">Attribution modeling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients-section reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Who I Work With</span><h2>Built for Businesses Across the Board</h2><p>The enterprise background means this kind of thinking scales down &mdash; not just for startups, but for any business that wants to compete smarter online.</p></div>
+    <div class="clients-grid">
+      <div class="client-type"><h4>Local Services</h4><p>Contractors, home services, medspas, salons, restaurants, gyms</p></div>
+      <div class="client-type"><h4>Ecommerce</h4><p>DTC brands, online retailers, subscription businesses</p></div>
+      <div class="client-type"><h4>B2B &amp; SaaS</h4><p>Professional services, SaaS companies, consultancies</p></div>
+      <div class="client-type"><h4>Agencies</h4><p>Agencies needing analytics, CRO, or UX expertise for their clients</p></div>
+      <div class="client-type"><h4>Startups &amp; New Ventures</h4><p>Early-stage companies building their digital foundation for the first time</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy-section reveal">
+  <div class="wrap">
+    <div class="phil-layout">
+      <h2>How I Think About This Work</h2>
+      <div class="phil-points">
+        <div class="phil-point"><div class="phil-n">01</div><div class="phil-text"><h3>Data before opinions</h3><p>Every recommendation starts with evidence &mdash; from analytics, from user behavior, from the numbers that actually tell the story. No guesswork dressed up as strategy.</p></div></div>
+        <div class="phil-point"><div class="phil-n">02</div><div class="phil-text"><h3>Fix the foundation first</h3><p>Most marketing problems aren't marketing problems &mdash; they're tracking, UX, or messaging problems. Finding the real cause matters more than applying the obvious fix.</p></div></div>
+        <div class="phil-point"><div class="phil-n">03</div><div class="phil-text"><h3>Strategy should be actionable</h3><p>A roadmap that sits in a Google Doc and never gets executed is not a deliverable. Every engagement ends with something you can actually do next.</p></div></div>
+        <div class="phil-point"><div class="phil-n">04</div><div class="phil-text"><h3>Start small, earn trust</h3><p>You shouldn't have to sign a 12-month contract to find out if someone is worth working with. Low-commitment entry points exist because they should.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-inner">
+    <h2>Let's Talk About What You Need</h2>
+    <p>Whether you have a specific problem to solve or you're not sure where to start, the best first step is a conversation. No pitch, no commitment required.</p>
+    <div class="final-actions">
+      <a class="btn btn-primary" href="mailto:hello@example.com">Get in Touch</a>
+      <a class="btn btn-secondary" href="/solutions">See Services &amp; Packages</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="foot-brand">Cline Digital Growth</div><p>Senior-level digital growth consulting for small businesses and lean teams.</p></div>
+      <div><h4>Navigate</h4><ul><li><a href="/">Home</a></li><li><a href="/solutions">Solutions</a></li><li><a href="/about">About</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="/solutions#starters">Starter Packages</a></li><li><a href="/solutions#sprints">Focused Sprints</a></li><li><a href="/solutions#growth">Growth Packages</a></li><li><a href="/solutions#monthly">Monthly Support</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:hello@example.com">hello@example.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="mailto:hello@example.com">Book an Audit</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; 2025 Cline Digital Growth. All rights reserved.</span><span>Peter Cline &middot; Digital Growth Consultant</span></div>
+  </div>
+</footer>
+
+<script>
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
+  toggle.addEventListener('click',function(){var open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false')});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}});
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

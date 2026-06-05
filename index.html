@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Growth Consulting for Small Businesses | Analytics, SEO, UX, AI and CRO</title>
-<meta name="description" content="Practical digital growth consulting for small businesses and lean teams. Get help with Google Business Profile, SEO, analytics, tracking, websites, landing pages, AI marketing workflows, ads, UX and conversion strategy.">
+<title>Cline Digital Growth | Analytics, UX, SEO & AI Marketing Consulting</title>
+<meta name="description" content="Senior-level digital growth consulting for small businesses and lean teams. Analytics, UX, SEO, CRO, and AI marketing expertise without the agency overhead.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --charcoal:#1a1a1a;
@@ -22,364 +22,179 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;scroll-padding-top:84px}
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    font-weight:300;
-    color:var(--ink);
-    background:var(--offwhite);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{font-family:'Inter',system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.05}
   h2{line-height:1.1;letter-spacing:-.02em}
   a{color:inherit;text-decoration:none}
   ul{list-style:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-  .eyebrow{
-    font-family:'Inter',sans-serif;
-    font-weight:500;
-    font-size:.72rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--sage);
-    display:inline-block;
-    margin-bottom:1.4rem;
-  }
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);display:inline-block;margin-bottom:1.4rem}
   .eyebrow.light{color:#9ab8a4}
 
   /* NAV */
-  nav{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    transition:background .2s ease, box-shadow .2s ease, padding .35s ease;
-    padding:22px 0;
-  }
-  nav.scrolled{
-    background:var(--warmwhite);
-    box-shadow:0 1px 0 var(--line);
-    padding:14px 0;
-  }
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .2s ease,box-shadow .2s ease,padding .35s ease;padding:22px 0}
+  nav.scrolled{background:var(--warmwhite);box-shadow:0 1px 0 var(--line);padding:14px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
-  .brand{
-    font-family:'DM Serif Display',serif;
-    font-size:1.35rem;
-    color:#fff;
-    transition:color .2s ease;
-    letter-spacing:.01em;
-  }
+  .brand{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;transition:color .2s ease;letter-spacing:.01em}
   nav.scrolled .brand{color:var(--charcoal)}
   .nav-links{display:flex;gap:34px;align-items:center}
-  .nav-links a{
-    font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);
-    transition:color .2s ease;
-  }
+  .nav-links a{font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);transition:color .2s ease}
   nav.scrolled .nav-links a{color:var(--charcoal)}
-  .nav-links a:hover{color:var(--sage)}
-  .nav-cta{
-    background:var(--sage);color:#fff !important;
-    padding:10px 20px;border-radius:2px;font-weight:500;
-  }
-  .nav-cta:hover{background:var(--sage-dark)}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--sage)}
+  nav.scrolled .nav-links a[aria-current="page"]{color:var(--sage)}
+  .nav-cta{background:var(--sage);color:#fff !important;padding:10px 20px;border-radius:2px;font-weight:500}
+  .nav-cta:hover{background:var(--sage-dark) !important}
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
   .nav-toggle span{width:24px;height:2px;background:#fff;transition:background .2s}
   nav.scrolled .nav-toggle span{background:var(--charcoal)}
 
   /* BUTTONS */
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'Inter',sans-serif;font-weight:500;
-    letter-spacing:.02em;cursor:pointer;border:1px solid transparent;
-  }
-  .btn-primary{
-    background:var(--sage);color:#fff;
-    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
-    transition:all .2s;
-  }
-  .btn-primary:hover{
-    background:var(--sage-dark);transform:translateY(-1px);
-    box-shadow:0 4px 12px rgba(74,124,89,.3);
-  }
-  .btn-secondary{
-    background:transparent;color:#fff;
-    border:1.5px solid rgba(255,255,255,.4);
-    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
-    transition:all .2s;
-  }
-  .btn-secondary:hover{
-    border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06);
-  }
-  .btn-outline{
-    background:transparent;color:#fff;
-    border:1.5px solid rgba(255,255,255,.4);
-    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
-    transition:all .2s;
-  }
-  .btn-outline:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.02em;cursor:pointer;border:1px solid transparent;text-decoration:none}
+  .btn-primary{background:var(--sage);color:#fff;padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
+  .btn-primary:hover{background:var(--sage-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,124,89,.3)}
+  .btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
+  .btn-secondary:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06)}
+  .btn-outline-dark{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:13px 26px;border-radius:4px;font-size:.9rem;transition:all .2s}
+  .btn-outline-dark:hover{background:var(--ink);color:#fff}
+  .btn-sage-outline{background:transparent;color:var(--sage);border:1.5px solid var(--sage);padding:13px 26px;border-radius:4px;font-size:.9rem;transition:all .2s}
+  .btn-sage-outline:hover{background:var(--sage);color:#fff}
 
   /* HERO */
-  .hero{
-    background:var(--charcoal);color:#fff;
-    padding:170px 0 100px;position:relative;overflow:hidden;
-  }
-  .hero::before{
-    content:"";position:absolute;top:-120px;right:-160px;
-    width:520px;height:520px;border-radius:50%;
-    background:radial-gradient(circle at center, rgba(74,124,89,.32), transparent 68%);
-  }
-  .hero::after{
-    content:"";position:absolute;bottom:-200px;left:8%;
-    width:340px;height:340px;
-    background:var(--navy);opacity:.5;transform:rotate(15deg);
-  }
-  .hero-grid{
-    position:relative;z-index:2;max-width:920px;
-  }
-  .hero h1{
-    font-size:clamp(3.4rem,8.5vw,6.6rem);
-    letter-spacing:-.01em;
-  }
-  .hero h1 .l{display:block}
-  .hero h1 .l2{padding-left:.9em}
-  .hero h1 .l3{padding-left:.35em;color:var(--sage)}
-  .hero-sub{
-    margin-top:2.2rem;font-size:1.08rem;font-weight:300;
-    color:rgba(255,255,255,.78);max-width:46ch;
-  }
-  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:2.6rem;position:relative;z-index:2}
+  .hero{background:var(--charcoal);color:#fff;padding:170px 0 110px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle at center,rgba(74,124,89,.25),transparent 65%)}
+  .hero-layout{display:grid;grid-template-columns:1fr 340px;gap:80px;align-items:end;position:relative;z-index:2}
+  .hero h1{font-size:clamp(3.6rem,9vw,7rem);letter-spacing:-.02em;line-height:.98}
+  .hero h1 em{font-style:italic;color:var(--sage)}
+  .hero-sub{margin-top:2.4rem;font-size:1.08rem;font-weight:300;color:rgba(255,255,255,.75);max-width:48ch;line-height:1.7}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:2.8rem}
+  .hero-side{padding-bottom:6px}
+  .hero-stat-stack{display:flex;flex-direction:column;gap:0;border:1px solid rgba(255,255,255,.14)}
+  .hero-stat{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .hero-stat:last-child{border-bottom:0}
+  .hero-stat .n{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--sage);line-height:1;letter-spacing:-.02em}
+  .hero-stat .l{font-size:.78rem;font-weight:400;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+
+  /* MARQUEE */
+  .strip{background:var(--navy);padding:18px 0;overflow:hidden;white-space:nowrap}
+  .strip-inner{display:inline-flex;gap:0;animation:marquee 28s linear infinite}
+  .strip-item{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:0 28px;border-right:1px solid rgba(255,255,255,.18)}
+  .strip-item:last-child{border-right:0}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
   /* SECTION BASE */
   section{padding:96px 0}
-  .sec-head{max-width:60ch;margin-bottom:3.4rem}
-  .sec-head h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
-  .sec-head p{margin-top:1.3rem;color:var(--muted);font-size:1.05rem;max-width:56ch}
+  .sec-head{max-width:58ch;margin-bottom:3.2rem}
+  .sec-head h2{font-size:clamp(2.2rem,4.8vw,3.6rem)}
+  .sec-head p{margin-top:1.2rem;color:var(--muted);font-size:1.04rem;max-width:54ch;line-height:1.7}
 
-  /* PAIN POINTS staggered */
+  /* PAIN POINTS */
   .pains{background:var(--warmwhite)}
-  .pain-list{display:flex;flex-direction:column;gap:2px;max-width:1000px}
-  .pain-list li{
-    font-family:'DM Serif Display',serif;
-    font-size:clamp(1.35rem,3.2vw,2.1rem);
-    color:var(--ink);padding:18px 0;position:relative;
-    border-bottom:1px solid var(--line);transition:padding-left .3s ease,color .3s ease;
-  }
-  .pain-list li:nth-child(even){margin-left:72px}
-  .pain-list li:nth-child(3n){color:var(--navy)}
-  .pain-list li::after{
-    content:"\201D";position:absolute;right:0;top:6px;color:var(--sage);
-    font-size:1.6rem;opacity:.5;font-family:'DM Serif Display',serif;
-  }
-  .pain-list li:hover{color:var(--sage);padding-left:clamp(12px,3vw,40px)}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1000px}
+  .pain-item{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+  .pain-item:nth-child(odd){padding-right:48px}
+  .pain-item:nth-child(even){padding-left:48px;border-left:1px solid var(--line)}
+  .pain-item::before{content:"";flex:0 0 auto;width:6px;height:6px;background:var(--sage);border-radius:50%;margin-top:.65em}
+  .pain-item p{font-family:'DM Serif Display',serif;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--ink);line-height:1.3}
 
-  /* SERVICE PILLARS asymmetric 2-col */
-  .pillars{background:var(--charcoal);color:#fff}
-  .pillars .sec-head h2{color:#fff}
-  .pillars .sec-head p{color:rgba(255,255,255,.7)}
-  .pillar-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.14)}
-  .pillar{
-    padding:42px 38px;border-bottom:1px solid rgba(255,255,255,.14);
-    border-right:1px solid rgba(255,255,255,.14);transition:background .3s ease;position:relative;
-  }
-  .pillar:nth-child(2n){border-right:0}
-  .pillar:nth-child(odd){background:rgba(255,255,255,.02)}
-  .pillar:nth-child(even){background:rgba(15,32,64,.35)}
-  .pillar:hover{background:var(--sage)}
-  .pillar .num{font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.2em;color:var(--sage);font-weight:600}
-  .pillar:hover .num{color:rgba(255,255,255,.85)}
-  .pillar h3{font-size:1.7rem;margin:14px 0 14px}
-  .pillar p{color:rgba(255,255,255,.72);font-size:.95rem}
-  .pillar:hover p{color:rgba(255,255,255,.92)}
+  /* SERVICES INDEX */
+  .services-index{background:var(--charcoal);color:#fff}
+  .services-index .sec-head h2{color:#fff}
+  .services-index .sec-head p{color:rgba(255,255,255,.68)}
+  .svc-table{border-top:1px solid rgba(255,255,255,.14);margin-bottom:3rem}
+  .svc-row{display:grid;grid-template-columns:44px 1fr 1fr 28px;gap:0 24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:center;color:rgba(255,255,255,.88);transition:color .2s}
+  a.svc-row{cursor:pointer}
+  a.svc-row:hover{color:#fff}
+  a.svc-row:hover .svc-arrow{transform:translateX(6px)}
+  .svc-num{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.2em;color:rgba(255,255,255,.35);font-weight:500}
+  .svc-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:rgba(255,255,255,.9);line-height:1.1}
+  .svc-tags{font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:.04em}
+  .svc-arrow{color:var(--sage);font-size:1.1rem;transition:transform .2s ease;text-align:right}
+  .services-footer{display:flex;justify-content:flex-end}
 
-  /* PACKAGES grid + grouped */
-  .packages{background:var(--offwhite)}
-  .pkg-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
-  .pkg-group-label{
-    grid-column:1/-1;
-    font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--muted);padding:32px 0 12px;border-top:1px solid var(--line);margin-top:8px;
-  }
-  .pkg-group-label:first-child{border-top:0;padding-top:0;margin-top:0}
-  .pkg{
-    background:var(--warmwhite);border:1px solid var(--line);border-radius:4px;
-    padding:30px 28px;
-    transition:all .2s ease;
-  }
-  .pkg:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.07);border-color:var(--sage)}
-  .pkg.feature{
-    background:var(--navy);color:#fff;border:1.5px solid var(--sage);
-    box-shadow:0 8px 32px rgba(15,32,64,.18);transform:translateY(-2px);
-  }
-  .pkg.feature p,.pkg.feature .pkg-desc{color:rgba(255,255,255,.78)}
-  .badge{
-    display:inline-block;font-size:.66rem;font-weight:600;letter-spacing:.14em;
-    text-transform:uppercase;padding:5px 11px;border-radius:2px;margin-bottom:16px;
-  }
-  .badge.starter{background:#e8efe9;color:var(--sage-dark)}
-  .badge.popular{background:var(--sage);color:#fff}
-  .badge.sprint{background:#e4ebf4;color:var(--navy)}
-  .badge.growth{background:#1a1a1a;color:#fff}
-  .badge.monthly{background:#f0e9dd;color:#7a5a2a}
-  .pkg.feature .badge.popular{background:var(--sage)}
-  .pkg h3{font-size:1.55rem;margin-bottom:14px}
-  .pkg-desc{font-size:.92rem;color:var(--muted);margin-bottom:20px}
-  .pkg-cta{
-    font-family:'Inter',sans-serif;font-weight:500;font-size:.86rem;
-    color:var(--sage);display:inline-flex;align-items:center;gap:8px;
-  }
-  .pkg.feature .pkg-cta{
-    background:var(--sage);color:#fff;padding:10px 20px;border-radius:4px;
-    display:inline-block;font-weight:500;font-size:.86rem;
-  }
-  .pkg-cta::after{content:"\2192";transition:transform .25s ease}
-  .pkg.feature .pkg-cta::after{content:""}
-  .pkg:hover .pkg-cta::after{transform:translateX(5px)}
+  /* FEATURED PACKAGES */
+  .featured-pkgs{background:var(--offwhite)}
+  .fpkg-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}
+  .fpkg{background:var(--warmwhite);border:1px solid var(--line);border-radius:4px;padding:36px 32px}
+  .fpkg.hero-pkg{background:var(--navy);color:#fff;border-color:var(--sage);border-width:1.5px;box-shadow:0 12px 40px rgba(15,32,64,.22)}
+  .fpkg h3{font-size:1.8rem;margin:14px 0 16px}
+  .fpkg-desc{font-size:.97rem;color:var(--muted);line-height:1.7;margin-bottom:24px}
+  .fpkg.hero-pkg .fpkg-desc{color:rgba(255,255,255,.72)}
+  .fpkg-badge{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:14px}
+  .fpkg-badge.popular{background:var(--sage);color:#fff}
+  .fpkg-badge.starter{background:#e8efe9;color:var(--sage-dark)}
+  .fpkg-cta-btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:.9rem;background:var(--sage);color:#fff;padding:12px 22px;border-radius:4px;transition:all .2s}
+  .fpkg-cta-btn:hover{background:var(--sage-dark);transform:translateY(-1px)}
+  .fpkg-cta-link{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:.9rem;color:var(--sage);transition:all .2s}
+  .fpkg-cta-link::after{content:"→";transition:transform .2s}
+  .fpkg-cta-link:hover::after{transform:translateX(5px)}
+  .fpkg-sub{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+  .fpkg-sub p{font-size:.86rem;color:var(--muted);margin-bottom:12px}
+  .view-all-wrap{margin-top:32px;text-align:center}
 
-  /* WHY DIFFERENT */
-  .why{background:var(--navy);color:#fff}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-  .why h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:#fff}
-  .why-lead{margin-top:1.6rem;color:rgba(255,255,255,.78);font-size:1.08rem}
-  .why-points li{
-    padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);
-    display:flex;gap:14px;font-size:1rem;color:rgba(255,255,255,.9);
-  }
-  .why-points li::before{content:"\2713";color:var(--sage);font-weight:600}
-
-  /* HOW IT WORKS large number */
-  .how{background:#f4f2ee}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-  .step{padding:34px 26px 34px 0;border-top:2px solid var(--ink);position:relative}
-  .step .n{font-family:'DM Serif Display',serif;font-size:3.6rem;color:var(--sage);line-height:1}
-  .step h3{font-size:1.4rem;margin:12px 0 12px}
-  .step p{font-size:.92rem;color:var(--muted)}
-
-  /* WHO WE HELP */
-  .who{background:var(--charcoal);color:#fff}
-  .who .sec-head h2{color:#fff}
-  .who-tags{display:flex;flex-wrap:wrap;gap:12px}
-  .who-tags span{
-    border:1px solid rgba(255,255,255,.22);padding:11px 18px;border-radius:40px;
-    font-size:.9rem;color:rgba(255,255,255,.85);transition:all .25s ease;
-    min-height:44px;display:inline-flex;align-items:center;
-  }
-  .who-tags span:hover{background:var(--sage);border-color:var(--sage);color:#fff}
-
-  /* AI SECTION */
-  .ai{background:var(--warmwhite)}
-  .ai-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-  .ai-lead{color:var(--muted);font-size:1.05rem;margin-top:1.4rem}
-  .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .cap-grid span{
-    background:var(--warmwhite);border:1px solid var(--line);padding:13px 16px;
-    font-size:.88rem;border-radius:3px;transition:border-color .25s,color .25s;
-  }
-  .cap-grid span:hover{border-color:var(--sage);color:var(--sage)}
-
-  /* ANALYTICS CREDIBILITY */
-  .analytics{background:var(--navy);color:#fff}
-  .analytics .sec-head h2{color:#fff}
-  .analytics .sec-head p{color:rgba(255,255,255,.78)}
-  .tool-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:2rem}
-  .tool-tags span{
-    font-size:.84rem;letter-spacing:.03em;padding:9px 16px;
-    border:1px solid rgba(255,255,255,.2);border-radius:2px;color:rgba(255,255,255,.86);
-  }
-
-  /* UX SECTION */
-  .ux{background:var(--offwhite)}
-  .ux-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-  .ux-lead{color:var(--muted);font-size:1.05rem;margin-top:1.4rem}
-  .ux-shapes{position:relative;height:320px}
-  .ux-shapes .s1{position:absolute;top:0;left:0;width:62%;height:60%;background:var(--navy)}
-  .ux-shapes .s2{position:absolute;bottom:0;right:0;width:55%;height:70%;background:var(--sage);mix-blend-mode:multiply}
-  .ux-shapes .s3{position:absolute;top:40%;left:30%;width:30%;height:30%;border:2px solid var(--charcoal)}
-  .ux-list{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:8px 18px}
-  .ux-list span{font-size:.9rem;color:var(--muted)}
-  .ux-list span::before{content:"\2022";color:var(--sage);margin-right:8px}
-
-  /* OUTCOMES */
-  .outcomes{background:var(--charcoal);color:#fff}
-  .outcomes .sec-head h2{color:#fff}
-  .out-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
-  .out-list li{
-    padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14);
-    display:flex;gap:16px;font-size:.98rem;color:rgba(255,255,255,.88);align-items:flex-start;
-  }
-  .out-list li .on{font-family:'DM Serif Display',serif;color:var(--sage);font-size:1.1rem;flex:0 0 auto}
-
-  /* FAQ */
-  .faq{background:var(--offwhite)}
-  .faq-wrap{max-width:840px}
-  .acc{border-top:1px solid var(--line)}
-  .acc:last-child{border-bottom:1px solid var(--line)}
-  .acc-q{
-    width:100%;background:none;border:0;cursor:pointer;text-align:left;
-    padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;
-    font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--ink);
-  }
-  .acc-q .ic{flex:0 0 auto;font-size:1.4rem;color:var(--sage);transition:transform .2s ease;font-family:'Inter',sans-serif;font-weight:300}
-  .acc-q[aria-expanded="true"] .ic{transform:rotate(45deg)}
-  .acc-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-  .acc-a p{padding:0 0 26px;color:var(--muted);font-size:1rem;max-width:64ch}
+  /* ABOUT TEASER */
+  .about-teaser{background:var(--navy);color:#fff}
+  .at-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .at-stats{display:flex;flex-direction:column;gap:0}
+  .at-stat{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.14);display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:center}
+  .at-stat:first-child{border-top:1px solid rgba(255,255,255,.14)}
+  .at-stat .n{font-family:'DM Serif Display',serif;font-size:3.2rem;color:var(--sage);line-height:1;letter-spacing:-.02em}
+  .at-stat .d{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.5}
+  .at-copy h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1.6rem}
+  .at-bio{color:rgba(255,255,255,.78);font-size:1.04rem;line-height:1.75;max-width:50ch}
+  .at-bio + .at-bio{margin-top:1rem}
+  .at-cta{margin-top:2.2rem;display:flex;gap:14px;flex-wrap:wrap}
 
   /* FINAL CTA */
-  .final{background:var(--charcoal);color:#fff;text-align:center;position:relative;overflow:hidden}
-  .final::before{
-    content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-    width:680px;height:680px;border-radius:50%;
-    background:radial-gradient(circle,rgba(74,124,89,.22),transparent 65%);
-  }
-  .final-inner{position:relative;z-index:2;max-width:720px;margin:0 auto}
+  .final{background:var(--charcoal);color:#fff;text-align:center;position:relative;overflow:hidden;padding:120px 0}
+  .final::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,89,.2),transparent 62%)}
+  .final-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
   .final h2{font-size:clamp(2.4rem,5.5vw,4rem)}
-  .final p{margin-top:1.6rem;color:rgba(255,255,255,.78);font-size:1.08rem}
-  .final-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:2.6rem}
+  .final p{margin-top:1.6rem;color:rgba(255,255,255,.72);font-size:1.06rem;line-height:1.7}
+  .final-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:2.8rem}
 
   /* FOOTER */
   footer{background:var(--navy);color:#fff;padding:64px 0 34px}
-  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;margin-bottom:42px}
-  .foot-brand{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:14px}
-  .foot-grid p{color:rgba(255,255,255,.7);font-size:.95rem;max-width:38ch}
-  .foot-grid h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:16px}
-  .foot-grid ul li{margin-bottom:10px}
-  .foot-grid ul li a{color:rgba(255,255,255,.82);font-size:.93rem}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:42px}
+  .foot-brand{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:12px}
+  .foot-grid p{color:rgba(255,255,255,.65);font-size:.9rem;max-width:34ch;line-height:1.65}
+  .foot-grid h4{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:14px}
+  .foot-grid ul li{margin-bottom:9px}
+  .foot-grid ul li a{color:rgba(255,255,255,.75);font-size:.9rem;transition:color .2s}
   .foot-grid ul li a:hover{color:#fff}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;font-size:.82rem;color:rgba(255,255,255,.55)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;font-size:.8rem;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 
   /* ANIMATIONS */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
   .reveal.in{opacity:1;transform:none}
 
   /* RESPONSIVE */
   @media(max-width:980px){
-    .why-grid,.ai-grid,.ux-grid{grid-template-columns:1fr;gap:40px}
-    .pkg-masonry{grid-template-columns:repeat(2,1fr)}
-    .steps{grid-template-columns:1fr 1fr}
-    .out-list{grid-template-columns:1fr}
+    .hero-layout{grid-template-columns:1fr;gap:48px}
+    .hero-side{display:grid;grid-template-columns:repeat(3,1fr)}
+    .hero-stat-stack{border:0;display:contents}
+    .hero-stat{border:1px solid rgba(255,255,255,.14);padding:20px}
+    .hero-stat:last-child{border:1px solid rgba(255,255,255,.14)}
+    .at-grid{grid-template-columns:1fr;gap:48px}
+    .fpkg-grid{grid-template-columns:1fr}
+    .svc-row{grid-template-columns:36px 1fr 28px;gap:0 16px}
+    .svc-tags{display:none}
+    .pain-grid{grid-template-columns:1fr;max-width:640px}
+    .pain-item:nth-child(even){padding-left:0;border-left:0}
+    .pain-item:nth-child(odd){padding-right:0}
   }
   @media(max-width:767px){
-    .nav-links{
-      position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
-      background:var(--charcoal);flex-direction:column;align-items:flex-start;
-      padding:96px 32px;gap:26px;transform:translateX(100%);transition:transform .35s ease;
-    }
+    .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;background:var(--charcoal);flex-direction:column;align-items:flex-start;padding:96px 32px;gap:26px;transform:translateX(100%);transition:transform .35s ease;z-index:99}
     .nav-links.open{transform:none}
     .nav-links a{color:#fff !important;font-size:1.05rem}
-    nav.scrolled .nav-links a{color:#fff !important}
     .nav-toggle{display:flex;z-index:101}
-    .pillar-grid{grid-template-columns:1fr}
-    .pillar{border-right:0}
-    .pkg-masonry{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr}
-    .steps-track{border-left:2px solid var(--line);padding-left:24px;margin-left:20px}
-    .steps-track .step{border-top:0;padding:18px 0}
-    .steps-track .n{margin-left:-45px;background:#f4f2ee;display:inline-block;padding:0 6px}
-    .pain-list li:nth-child(even){margin-left:36px}
-    .ux-shapes{display:none}
-    .ux-grid{grid-template-columns:1fr}
-    section{padding:52px 0}
-    .hero{padding:100px 0 64px}
+    .hero-side{display:none}
+    section{padding:64px 0}
+    .hero{padding:120px 0 80px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .foot-bottom{flex-direction:column;align-items:flex-start}
   }
-  @media(max-width:640px){
-    .foot-grid{grid-template-columns:1fr;gap:32px}
-    .foot-grid>*{width:100%}
+  @media(max-width:480px){
+    .foot-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -387,368 +202,195 @@
 
 <nav id="nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand">Cline Digital Growth</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <a href="/" class="brand">Cline Digital Growth</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#packages">Packages</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="/" aria-current="page">Home</a></li>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/about">About</a></li>
       <li><a class="nav-cta" href="mailto:hello@example.com">Book an Audit</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <h1>
-      <span class="l l1">Get Found.</span>
-      <span class="l l2">Look Credible.</span>
-      <span class="l l3">Grow Faster.</span>
-    </h1>
-    <p class="hero-sub">We help small businesses and lean teams clean up their digital foundation, improve their website, set up smarter tracking, show up better in search, launch better campaigns, and use AI to move faster.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:hello@example.com">Start with a Digital Growth Audit</a>
-      <a class="btn btn-secondary" href="#packages">See Starter Packages</a>
+  <div class="wrap hero-layout">
+    <div>
+      <h1>Get Found.<br><em>Look Credible.</em><br>Grow Faster.</h1>
+      <p class="hero-sub">Senior analytics, UX, and marketing strategy expertise — applied to your business without the enterprise price tag or the bloated agency model.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:hello@example.com">Start with an Audit</a>
+        <a class="btn btn-secondary" href="/solutions">See Services &amp; Packages</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hero-stat-stack">
+        <div class="hero-stat">
+          <div class="n">11+</div>
+          <div class="l">Years marketing experience</div>
+        </div>
+        <div class="hero-stat">
+          <div class="n">7</div>
+          <div class="l">Years enterprise analytics &amp; CRO</div>
+        </div>
+        <div class="hero-stat">
+          <div class="n">F100</div>
+          <div class="l">Fortune 100 client background</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner">
+    <span class="strip-item">Google Analytics 4</span>
+    <span class="strip-item">SEO &amp; Local Search</span>
+    <span class="strip-item">UX / UI Design</span>
+    <span class="strip-item">Conversion Rate Optimization</span>
+    <span class="strip-item">Google Tag Manager</span>
+    <span class="strip-item">AI Marketing Workflows</span>
+    <span class="strip-item">Looker Studio</span>
+    <span class="strip-item">Google Ads &amp; Meta Ads</span>
+    <span class="strip-item">Google Business Profile</span>
+    <span class="strip-item">Landing Page Strategy</span>
+    <span class="strip-item">Google Analytics 4</span>
+    <span class="strip-item">SEO &amp; Local Search</span>
+    <span class="strip-item">UX / UI Design</span>
+    <span class="strip-item">Conversion Rate Optimization</span>
+    <span class="strip-item">Google Tag Manager</span>
+    <span class="strip-item">AI Marketing Workflows</span>
+    <span class="strip-item">Looker Studio</span>
+    <span class="strip-item">Google Ads &amp; Meta Ads</span>
+    <span class="strip-item">Google Business Profile</span>
+    <span class="strip-item">Landing Page Strategy</span>
+  </div>
+</div>
 
 <section class="pains reveal">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Sound Familiar</span>
-      <h2>The Gaps That Quietly Cost You Customers</h2>
+      <h2>The Gaps That Cost You Customers</h2>
     </div>
-    <ul class="pain-list">
-      <li>My business doesn't show up well on Google.</li>
-      <li>My website exists, but it doesn't bring in enough leads.</li>
-      <li>I don't know where my traffic or calls are coming from.</li>
-      <li>My social profiles look unfinished.</li>
-      <li>I want to run ads, but I don't want to waste money.</li>
-      <li>I know AI could help my marketing, but I don't know where to start.</li>
-      <li>I need someone to just fix the digital basics.</li>
-      <li>I need a smarter growth plan, not random marketing tasks.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="pillars reveal" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">Where We Go to Work</span>
-      <h2>Six Pillars of a Healthier Digital Presence</h2>
-      <p>From the foundation customers see first to the systems that compound over time, each pillar can stand alone or work together.</p>
-    </div>
-    <div class="pillar-grid">
-      <div class="pillar">
-        <span class="num">01</span>
-        <h3>Local Digital Foundation</h3>
-        <p>Google Business Profile, Apple Business Connect, Bing Places, Yelp, social profiles, basic SEO, review strategy.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">02</span>
-        <h3>Websites, UX, and Landing Pages</h3>
-        <p>Website audits, landing page strategy, UX/UI design, page redesigns, lead flow improvements, conversion-focused front-end support.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">03</span>
-        <h3>SEO, Local SEO, and AEO</h3>
-        <p>Search strategy for Google, Maps, and AI-driven answer engines.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">04</span>
-        <h3>Analytics, Tracking, and Reporting</h3>
-        <p>GA4, GTM, Search Console, Meta Pixel, conversion tracking, UTMs, Looker Studio dashboards.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">05</span>
-        <h3>Ads and Campaign Setup</h3>
-        <p>Google Ads, Meta Ads, campaign structure, tracking, landing page recommendations, paid media dashboard.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">06</span>
-        <h3>AI-Assisted Marketing Systems</h3>
-        <p>AI workflows for content calendars, social posts, ad copy, SEO briefs, email templates, prompt libraries.</p>
-      </div>
+    <div class="pain-grid">
+      <div class="pain-item"><p>My business doesn't show up well on Google.</p></div>
+      <div class="pain-item"><p>My website exists, but it doesn't bring in leads.</p></div>
+      <div class="pain-item"><p>I don't know where my traffic or calls are coming from.</p></div>
+      <div class="pain-item"><p>I want to run ads, but I don't want to waste money.</p></div>
+      <div class="pain-item"><p>I know AI could help my marketing — I don't know where to start.</p></div>
+      <div class="pain-item"><p>I need a smarter growth plan, not random marketing tasks.</p></div>
     </div>
   </div>
 </section>
 
-<section class="packages reveal" id="packages">
+<section class="services-index reveal">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Pick Your Entry Point</span>
-      <h2>Start Small, Then Scale What Works</h2>
-      <p>You don't need to commit to a huge agency contract to start improving your digital presence. Begin with a focused starter package, fix the obvious gaps, and scale into deeper strategy or monthly support when it makes sense.</p>
+      <span class="eyebrow light">What We Do</span>
+      <h2>Six Areas of Practice</h2>
+      <p>From fixing your digital foundation to building systems that compound over time. Each service area can stand alone or work as part of a broader engagement.</p>
     </div>
-    <div class="pkg-masonry">
-      <div class="pkg-group-label">Starter Packages</div>
-      <div class="pkg">
-        <span class="badge starter">Low-cost starter</span>
-        <h3>Digital Quick Fix</h3>
-        <p class="pkg-desc">Google Business Profile review, social cleanup, website first impression, basic SEO/tracking check, 5 to 10 priority fixes, action plan.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Start Small</a>
-      </div>
-      <div class="pkg">
-        <span class="badge starter">Low-cost starter</span>
-        <h3>Local Digital Foundation Setup</h3>
-        <p class="pkg-desc">GBP setup and optimization, Apple Business Connect plus Bing Places, social setup and cleanup, business description, review strategy, local SEO basics.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Fix My Foundation</a>
-      </div>
-      <div class="pkg">
-        <span class="badge starter">Low-cost starter</span>
-        <h3>Tracking and Reporting Starter</h3>
-        <p class="pkg-desc">GA4 setup, Search Console, GTM basics, form and conversion tracking, UTM setup, Looker Studio dashboard, monthly KPIs.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Make My Marketing Measurable</a>
-      </div>
-      <div class="pkg-group-label">Focused Sprints</div>
-      <div class="pkg">
-        <span class="badge sprint">Focused sprint</span>
-        <h3>Website Lead Generation Sprint</h3>
-        <p class="pkg-desc">Homepage and service page audit, CTA and form review, mobile UX, trust signals, landing page recommendations, wireframe concepts, copy recs, tracking recs.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Improve My Website</a>
-      </div>
-      <div class="pkg">
-        <span class="badge sprint">Focused sprint</span>
-        <h3>SEO and AI Search Sprint</h3>
-        <p class="pkg-desc">Keyword research, local SEO, GBP optimization plan, service page map, FAQ strategy, AEO recommendations, content ideas, competitor scan.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Improve My Visibility</a>
-      </div>
-      <div class="pkg-group-label">Growth Packages</div>
-      <div class="pkg feature">
-        <span class="badge popular">Most popular</span>
+    <div class="svc-table">
+      <a class="svc-row" href="/solutions#foundation">
+        <span class="svc-num">01</span>
+        <span class="svc-name">Local Digital Foundation</span>
+        <span class="svc-tags">GBP &middot; Listings &middot; Social &middot; Review Strategy</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+      <a class="svc-row" href="/solutions#websites">
+        <span class="svc-num">02</span>
+        <span class="svc-name">Websites, UX &amp; Landing Pages</span>
+        <span class="svc-tags">Audits &middot; Design &middot; Wireframes &middot; Conversion</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+      <a class="svc-row" href="/solutions#seo">
+        <span class="svc-num">03</span>
+        <span class="svc-name">SEO, Local SEO &amp; AEO</span>
+        <span class="svc-tags">Search &middot; Maps &middot; AI Answer Engines</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+      <a class="svc-row" href="/solutions#analytics">
+        <span class="svc-num">04</span>
+        <span class="svc-name">Analytics, Tracking &amp; Reporting</span>
+        <span class="svc-tags">GA4 &middot; GTM &middot; Dashboards &middot; Conversion Tracking</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+      <a class="svc-row" href="/solutions#ads">
+        <span class="svc-num">05</span>
+        <span class="svc-name">Ads &amp; Campaign Setup</span>
+        <span class="svc-tags">Google &middot; Meta &middot; Structure &middot; Tracking</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+      <a class="svc-row" href="/solutions#ai">
+        <span class="svc-num">06</span>
+        <span class="svc-name">AI-Assisted Marketing Systems</span>
+        <span class="svc-tags">Workflows &middot; Content &middot; Prompts &middot; Calendars</span>
+        <span class="svc-arrow">&rarr;</span>
+      </a>
+    </div>
+    <div class="services-footer">
+      <a class="btn-sage-outline btn" href="/solutions">See all packages &amp; pricing &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-pkgs reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Where Most Clients Start</span>
+      <h2>Pick an Entry Point</h2>
+      <p>You don't need to commit to a large engagement to start. Most clients begin with a focused audit or a low-cost starter package and scale from there.</p>
+    </div>
+    <div class="fpkg-grid">
+      <div class="fpkg hero-pkg">
+        <span class="fpkg-badge popular">Most Popular</span>
         <h3>Digital Growth Audit</h3>
-        <p class="pkg-desc">Website UX, analytics, local SEO, GBP, search visibility, social presence, conversion path, competitor scan, prioritized roadmap, 30-day plan.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Start with an Audit</a>
+        <p class="fpkg-desc">A comprehensive review of your website UX, analytics, local SEO, Google Business Profile, search visibility, social presence, and conversion path. Delivered as a prioritized roadmap with a 30-day action plan.</p>
+        <a class="fpkg-cta-btn" href="mailto:hello@example.com">Start with an Audit</a>
       </div>
-      <div class="pkg">
-        <span class="badge growth">Growth package</span>
-        <h3>AI Marketing Engine</h3>
-        <p class="pkg-desc">Brand voice guide, content pillars, monthly content calendar, social post templates, blog and SEO briefs, email templates, ad copy, prompt library, repeatable workflow.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Build My Marketing Engine</a>
+      <div class="fpkg">
+        <span class="fpkg-badge starter">Low-Cost Starter</span>
+        <h3>Digital Quick Fix</h3>
+        <p class="fpkg-desc">A fast, focused review of your Google Business Profile, social presence, website first impression, and basic SEO and tracking setup. Delivers 5&ndash;10 priority fixes with an action plan.</p>
+        <a class="fpkg-cta-link" href="mailto:hello@example.com">Start Small</a>
+        <div class="fpkg-sub">
+          <p>Not sure where to begin? <a href="/solutions" style="color:var(--sage);font-weight:500">See all packages &rarr;</a></p>
+        </div>
       </div>
-      <div class="pkg">
-        <span class="badge growth">Growth package</span>
-        <h3>Ads and Landing Page Launch Kit</h3>
-        <p class="pkg-desc">Google and Meta Ads setup guidance, pixel and conversion tracking, campaign structure, starter ad copy, audience and keyword recs, landing page strategy, UTM setup, reporting dashboard.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Launch Smarter Ads</a>
-      </div>
-      <div class="pkg-group-label">Monthly Support</div>
-      <div class="pkg">
-        <span class="badge monthly">Monthly support</span>
-        <h3>Monthly Digital Growth Partner</h3>
-        <p class="pkg-desc">Monthly analytics review, website optimization recs, SEO and content planning, GBP review, paid media review, AI marketing support, dashboard monitoring, UX and CRO recs, monthly strategy call.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Get Ongoing Support</a>
-      </div>
+    </div>
+    <div class="view-all-wrap">
+      <a class="btn btn-outline-dark" href="/solutions">View all services, packages &amp; pricing</a>
     </div>
   </div>
 </section>
 
-<section class="why reveal">
-  <div class="wrap why-grid">
-    <div>
-      <span class="eyebrow light">The Difference</span>
-      <h2>Not Your Typical Agency</h2>
-      <p class="why-lead">Most small businesses don't need a 12-month agency contract. They need someone who can find the gaps, fix the foundation, and show them what to do next.</p>
-    </div>
-    <ul class="why-points">
-      <li>Senior strategy without agency overhead</li>
-      <li>Practical setup plus deeper analytics expertise</li>
-      <li>Not just reports, actual next steps</li>
-      <li>Not just design, measurable UX improvements</li>
-      <li>Not just AI content, useful AI workflows</li>
-      <li>Start small, then scale</li>
-      <li>Clear priorities instead of marketing chaos</li>
-    </ul>
-  </div>
-</section>
-
-<section class="how reveal" id="process">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">The Engagement</span>
-      <h2>A Clear Path From Diagnosis to Results</h2>
-    </div>
-    <div class="steps steps-track">
-      <div class="step">
-        <div class="n">01</div>
-        <h3>Diagnose</h3>
-        <p>We review your website, search presence, tracking, profiles, content, campaigns, and customer journey.</p>
+<section class="about-teaser reveal">
+  <div class="wrap at-grid">
+    <div class="at-stats">
+      <div class="at-stat">
+        <div class="n">11+</div>
+        <div class="d">Years of marketing and digital strategy experience</div>
       </div>
-      <div class="step">
-        <div class="n">02</div>
-        <h3>Prioritize</h3>
-        <p>We separate urgent fixes from nice-to-haves so you know what will actually move the needle.</p>
+      <div class="at-stat">
+        <div class="n">7</div>
+        <div class="d">Years of enterprise analytics, insights, and CRO consulting</div>
       </div>
-      <div class="step">
-        <div class="n">03</div>
-        <h3>Build or Improve</h3>
-        <p>We help set up profiles, improve pages, create content systems, clean up tracking, design better UX, or prepare campaigns.</p>
-      </div>
-      <div class="step">
-        <div class="n">04</div>
-        <h3>Measure and Iterate</h3>
-        <p>We set up reporting and help you understand what is working, what is not, and what to improve next.</p>
+      <div class="at-stat">
+        <div class="n">F100</div>
+        <div class="d">Fortune 100 clients served at the enterprise level</div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="who reveal">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">Who We Serve</span>
-      <h2>Built for Lean Teams and Growing Businesses</h2>
-    </div>
-    <div class="who-tags">
-      <span>Local service businesses</span>
-      <span>Contractors and home services</span>
-      <span>Med spas, salons, gyms, and wellness brands</span>
-      <span>Restaurants, cafes, and local retail</span>
-      <span>Ecommerce brands</span>
-      <span>SaaS and B2B companies</span>
-      <span>Startups and new offers</span>
-      <span>Agencies needing analytics, CRO, or UX support</span>
-      <span>Nonprofits and community organizations</span>
-      <span>Consultants, coaches, and professional services</span>
-    </div>
-  </div>
-</section>
-
-<section class="ai reveal">
-  <div class="wrap ai-grid">
-    <div>
-      <span class="eyebrow">Smarter, Not Noisier</span>
-      <h2>AI-Assisted Marketing, Without the Generic Slop</h2>
-      <p class="ai-lead">We use AI workflows to help you move faster across research, content, SEO, social, email, ads, and campaign planning. The goal is not to flood the internet with generic posts. The goal is to turn your business knowledge into clearer messaging, better systems, and more consistent marketing execution.</p>
-    </div>
-    <div class="cap-grid">
-      <span>SEO content briefs</span>
-      <span>Social content calendars</span>
-      <span>Ad copy variations</span>
-      <span>Email templates</span>
-      <span>Customer persona research</span>
-      <span>Competitor summaries</span>
-      <span>Review mining</span>
-      <span>FAQ creation</span>
-      <span>Landing page copy</span>
-      <span>Go-to-market planning</span>
-      <span>Prompt libraries</span>
-      <span>Repeatable marketing workflows</span>
-    </div>
-  </div>
-</section>
-
-<section class="analytics reveal">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">The Foundation</span>
-      <h2>Built on Enterprise-Level Analytics and Conversion Experience</h2>
-      <p>The same thinking used to improve enterprise websites, testing programs, dashboards, and digital experiences can be applied to small businesses in a practical, affordable way.</p>
-    </div>
-    <div class="tool-tags">
-      <span>GA4 and GA360</span>
-      <span>Google Tag Manager</span>
-      <span>Looker Studio</span>
-      <span>Contentsquare</span>
-      <span>Clarity and Hotjar</span>
-      <span>Optimizely</span>
-      <span>VWO</span>
-      <span>Adobe Target</span>
-      <span>Dashboarding</span>
-      <span>Funnel analysis</span>
-      <span>UX audits</span>
-      <span>CRO roadmaps</span>
-      <span>A/B testing</span>
-      <span>Executive readouts</span>
-    </div>
-  </div>
-</section>
-
-<section class="ux reveal">
-  <div class="wrap ux-grid">
-    <div>
-      <span class="eyebrow">Design With Intent</span>
-      <h2>Strategy Meets Design Execution</h2>
-      <p class="ux-lead">Once we know what needs to improve, we can help turn recommendations into better user experiences. UX/UI and front-end support helps businesses create landing pages, service pages, wireframes, prototypes, and front-end-ready concepts that are cleaner, clearer, and easier to convert.</p>
-      <div class="ux-list">
-        <span>UX/UI design</span>
-        <span>Wireframes</span>
-        <span>Landing pages</span>
-        <span>Page redesigns</span>
-        <span>Mobile-first layouts</span>
-        <span>Figma prototypes</span>
-        <span>Design systems</span>
-        <span>Front-end-ready handoff</span>
-        <span>Conversion-focused design</span>
-      </div>
-    </div>
-    <div class="ux-shapes" aria-hidden="true">
-      <div class="s1"></div>
-      <div class="s2"></div>
-      <div class="s3"></div>
-    </div>
-  </div>
-</section>
-
-<section class="outcomes reveal">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">The Payoff</span>
-      <h2>What Clients Walk Away With</h2>
-    </div>
-    <ul class="out-list">
-      <li><span class="on">01</span>A Google Business Profile that is complete, optimized, and easier to find</li>
-      <li><span class="on">02</span>A website that clearly explains what the business does and how to take action</li>
-      <li><span class="on">03</span>Tracking that shows where leads and sales are coming from</li>
-      <li><span class="on">04</span>A prioritized roadmap instead of a random list of marketing ideas</li>
-      <li><span class="on">05</span>SEO and AEO content ideas that match what customers are actually searching</li>
-      <li><span class="on">06</span>AI workflows that make content and campaign planning faster</li>
-    </ul>
-  </div>
-</section>
-
-<section class="faq reveal" id="faq">
-  <div class="wrap faq-wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Questions, Answered</span>
-      <h2>Before You Reach Out</h2>
-    </div>
-    <div class="acc-group">
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Do I need a big budget to start?<span class="ic">+</span></button>
-        <div class="acc-a"><p>No. Starter packages are designed to create a low-cost path in. We can begin with a focused audit, setup, or cleanup project, then scale into larger work only if it makes sense.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Do you only work with small businesses?<span class="ic">+</span></button>
-        <div class="acc-a"><p>No. The consultancy is especially useful for small businesses and lean teams, but the background includes enterprise analytics, CRO, UX, and experimentation work. That means clients get senior-level thinking in a practical format.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Can you help if I don't have analytics set up?<span class="ic">+</span></button>
-        <div class="acc-a"><p>Yes. We can help set up or clean up GA4, Google Tag Manager, Search Console, pixels, conversion tracking, UTMs, and basic reporting.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Can you help with Google Business Profile?<span class="ic">+</span></button>
-        <div class="acc-a"><p>Yes. We can set up, optimize, and improve Google Business Profile details, categories, services, descriptions, photos, review strategy, and local visibility basics.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Can you build or redesign pages?<span class="ic">+</span></button>
-        <div class="acc-a"><p>Yes. We can provide UX/UI design support, wireframes, prototypes, landing page strategy, and front-end-ready recommendations. Depending on the scope, we can also support implementation.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Can you help with AI marketing?<span class="ic">+</span></button>
-        <div class="acc-a"><p>Yes. AI workflows can support content systems, SEO research, social calendars, ad copy, email templates, review mining, competitor research, and repeatable marketing workflows.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">Do you run ads?<span class="ic">+</span></button>
-        <div class="acc-a"><p>We can help with ad account setup, campaign structure, tracking, landing page strategy, ad copy, UTMs, and performance review. Full campaign management can be scoped based on need.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-q" aria-expanded="false">What is the best place to start?<span class="ic">+</span></button>
-        <div class="acc-a"><p>For most businesses, the Digital Growth Audit is the best starting point. If the business is very new or messy online, the Local Digital Foundation Setup or Tracking and Reporting Starter may be a better first step.</p></div>
+    <div class="at-copy">
+      <span class="eyebrow light">Who's Behind This</span>
+      <h2>Senior Expertise. Accessible Format.</h2>
+      <p class="at-bio">I'm Peter Cline. For over a decade I worked inside enterprise analytics, helping Fortune 100 companies improve their websites, digital experiences, and marketing performance through data, experimentation, and design.</p>
+      <p class="at-bio">Cline Digital Growth exists to bring that same level of rigorous, strategic thinking to small businesses and lean teams &mdash; without the agency overhead, the long contracts, or the generalist advice.</p>
+      <div class="at-cta">
+        <a class="btn btn-primary" href="/about">About Peter Cline</a>
+        <a class="btn btn-secondary" href="mailto:hello@example.com">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -757,10 +399,10 @@
 <section class="final reveal">
   <div class="wrap final-inner">
     <h2>Start with One Focused Improvement</h2>
-    <p>You don't need to fix everything at once. Start with a small audit, setup, or cleanup package, then build from there with a clearer digital foundation and a smarter growth plan.</p>
+    <p>You don't need to fix everything at once. Start with a targeted audit or starter package, fix the obvious gaps, and build from there with a clearer plan.</p>
     <div class="final-actions">
-      <a class="btn btn-primary" href="mailto:hello@example.com">Start with a Digital Growth Audit</a>
-      <a class="btn btn-outline" href="#packages">See Starter Packages</a>
+      <a class="btn btn-primary" href="mailto:hello@example.com">Book a Digital Growth Audit</a>
+      <a class="btn btn-secondary" href="/solutions">See All Services</a>
     </div>
   </div>
 </section>
@@ -770,60 +412,57 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">Cline Digital Growth</div>
-        <p>Practical digital growth consulting for small businesses and lean teams.</p>
+        <p>Senior-level digital growth consulting for small businesses and lean teams.</p>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h4>Navigate</h4>
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="mailto:hello@example.com">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/solutions">Solutions</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#" aria-label="LinkedIn profile">LinkedIn</a></li>
+          <li><a href="/solutions#foundation">Local SEO &amp; GBP</a></li>
+          <li><a href="/solutions#websites">Websites &amp; UX</a></li>
+          <li><a href="/solutions#analytics">Analytics &amp; Tracking</a></li>
+          <li><a href="/solutions#ai">AI Marketing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
           <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="mailto:hello@example.com">Book an Audit</a></li>
         </ul>
       </div>
     </div>
-    <div class="foot-bottom">Copyright 2025 Cline Digital Growth. All rights reserved.</div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 Cline Digital Growth. All rights reserved.</span>
+      <span>Peter Cline &middot; Digital Growth Consultant</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Sticky nav background on scroll
   var nav=document.getElementById('nav');
-  function onScroll(){ if(window.scrollY>60){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');} }
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60)}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-  // Mobile nav toggle
-  var toggle=document.getElementById('navToggle');
-  var links=document.getElementById('navLinks');
+  var toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
   toggle.addEventListener('click',function(){
     var open=links.classList.toggle('open');
     toggle.setAttribute('aria-expanded',open?'true':'false');
   });
   links.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+    if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}
   });
-
-  // FAQ accordion
-  document.querySelectorAll('.acc-q').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var expanded=btn.getAttribute('aria-expanded')==='true';
-      var panel=btn.nextElementSibling;
-      btn.setAttribute('aria-expanded',expanded?'false':'true');
-      panel.style.maxHeight=expanded?null:panel.scrollHeight+'px';
-    });
-  });
-
-  // Reveal on scroll
   var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
 </body>
 </html>
