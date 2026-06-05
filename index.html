@@ -17,11 +17,11 @@
     --sage-dark:#3c6649;
     --warmwhite:#fffdf9;
     --ink:#1a1a1a;
-    --muted:#5a5a55;
+    --muted:#4a4a46;
     --line:#dedcd5;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:78px}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
   body{
     font-family:'Inter',system-ui,sans-serif;
     font-weight:300;
@@ -31,6 +31,7 @@
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.05}
+  h2{line-height:1.1;letter-spacing:-.02em}
   a{color:inherit;text-decoration:none}
   ul{list-style:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
@@ -49,12 +50,11 @@
   /* NAV */
   nav{
     position:fixed;top:0;left:0;right:0;z-index:100;
-    transition:background .35s ease, box-shadow .35s ease, padding .35s ease;
+    transition:background .2s ease, box-shadow .2s ease, padding .35s ease;
     padding:22px 0;
   }
   nav.scrolled{
-    background:rgba(248,247,244,.94);
-    backdrop-filter:blur(10px);
+    background:var(--warmwhite);
     box-shadow:0 1px 0 var(--line);
     padding:14px 0;
   }
@@ -63,16 +63,16 @@
     font-family:'DM Serif Display',serif;
     font-size:1.35rem;
     color:#fff;
-    transition:color .35s ease;
+    transition:color .2s ease;
     letter-spacing:.01em;
   }
-  nav.scrolled .brand{color:var(--ink)}
+  nav.scrolled .brand{color:var(--charcoal)}
   .nav-links{display:flex;gap:34px;align-items:center}
   .nav-links a{
     font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);
-    transition:color .35s ease;
+    transition:color .2s ease;
   }
-  nav.scrolled .nav-links a{color:var(--muted)}
+  nav.scrolled .nav-links a{color:var(--charcoal)}
   .nav-links a:hover{color:var(--sage)}
   .nav-cta{
     background:var(--sage);color:#fff !important;
@@ -80,26 +80,45 @@
   }
   .nav-cta:hover{background:var(--sage-dark)}
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
-  .nav-toggle span{width:24px;height:2px;background:#fff;transition:background .35s}
-  nav.scrolled .nav-toggle span{background:var(--ink)}
+  .nav-toggle span{width:24px;height:2px;background:#fff;transition:background .2s}
+  nav.scrolled .nav-toggle span{background:var(--charcoal)}
 
   /* BUTTONS */
   .btn{
-    display:inline-block;padding:15px 30px;border-radius:2px;
-    font-family:'Inter',sans-serif;font-weight:500;font-size:.92rem;
-    letter-spacing:.01em;cursor:pointer;transition:all .25s ease;border:1px solid transparent;
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Inter',sans-serif;font-weight:500;
+    letter-spacing:.02em;cursor:pointer;border:1px solid transparent;
   }
-  .btn-primary{background:var(--sage);color:#fff}
-  .btn-primary:hover{background:var(--sage-dark);transform:translateY(-2px)}
-  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-  .btn-outline-dark{background:transparent;color:var(--ink);border-color:var(--ink)}
-  .btn-outline-dark:hover{background:var(--ink);color:#fff}
+  .btn-primary{
+    background:var(--sage);color:#fff;
+    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
+    transition:all .2s;
+  }
+  .btn-primary:hover{
+    background:var(--sage-dark);transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(74,124,89,.3);
+  }
+  .btn-secondary{
+    background:transparent;color:#fff;
+    border:1.5px solid rgba(255,255,255,.4);
+    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
+    transition:all .2s;
+  }
+  .btn-secondary:hover{
+    border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06);
+  }
+  .btn-outline{
+    background:transparent;color:#fff;
+    border:1.5px solid rgba(255,255,255,.4);
+    padding:14px 28px;border-radius:4px;font-weight:500;font-size:.95rem;
+    transition:all .2s;
+  }
+  .btn-outline:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06)}
 
   /* HERO */
   .hero{
     background:var(--charcoal);color:#fff;
-    padding:170px 0 90px;position:relative;overflow:hidden;
+    padding:170px 0 100px;position:relative;overflow:hidden;
   }
   .hero::before{
     content:"";position:absolute;top:-120px;right:-160px;
@@ -112,8 +131,7 @@
     background:var(--navy);opacity:.5;transform:rotate(15deg);
   }
   .hero-grid{
-    display:grid;grid-template-columns:1.35fr .9fr;gap:60px;align-items:end;
-    position:relative;z-index:2;
+    position:relative;z-index:2;max-width:920px;
   }
   .hero h1{
     font-size:clamp(3.4rem,8.5vw,6.6rem);
@@ -126,33 +144,12 @@
     margin-top:2.2rem;font-size:1.08rem;font-weight:300;
     color:rgba(255,255,255,.78);max-width:46ch;
   }
-  .hero-side{padding-bottom:8px}
-  .hero-bullets{margin-top:8px}
-  .hero-bullets li{
-    padding:16px 0;border-top:1px solid rgba(255,255,255,.14);
-    font-size:.94rem;color:rgba(255,255,255,.86);display:flex;gap:12px;align-items:flex-start;
-  }
-  .hero-bullets li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
-  .hero-bullets li::before{content:"";flex:0 0 auto;width:7px;height:7px;margin-top:8px;background:var(--sage);border-radius:50%}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:2.6rem;position:relative;z-index:2}
-  .trust-note{
-    margin-top:1.8rem;font-size:.82rem;letter-spacing:.04em;
-    color:rgba(255,255,255,.55);position:relative;z-index:2;
-  }
-
-  /* CREDIBILITY STRIP */
-  .cred{background:var(--navy);color:#fff;padding:26px 0}
-  .cred-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 28px;align-items:center}
-  .cred-inner span{
-    font-size:.74rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
-    color:rgba(255,255,255,.82);
-  }
-  .cred-inner .dot{color:var(--sage);font-size:.6rem}
 
   /* SECTION BASE */
   section{padding:96px 0}
   .sec-head{max-width:60ch;margin-bottom:3.4rem}
-  .sec-head h2{font-size:clamp(2.1rem,4.6vw,3.4rem);letter-spacing:-.005em}
+  .sec-head h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
   .sec-head p{margin-top:1.3rem;color:var(--muted);font-size:1.05rem;max-width:56ch}
 
   /* PAIN POINTS staggered */
@@ -164,14 +161,13 @@
     color:var(--ink);padding:18px 0;position:relative;
     border-bottom:1px solid var(--line);transition:padding-left .3s ease,color .3s ease;
   }
-  .pain-list li:nth-child(even){padding-left:clamp(0px,12vw,150px)}
+  .pain-list li:nth-child(even){margin-left:72px}
   .pain-list li:nth-child(3n){color:var(--navy)}
   .pain-list li::after{
     content:"\201D";position:absolute;right:0;top:6px;color:var(--sage);
-    font-size:2.4rem;opacity:.25;font-family:'DM Serif Display',serif;
+    font-size:1.6rem;opacity:.5;font-family:'DM Serif Display',serif;
   }
   .pain-list li:hover{color:var(--sage);padding-left:clamp(12px,3vw,40px)}
-  .pain-list li:nth-child(even):hover{padding-left:clamp(40px,14vw,180px)}
 
   /* SERVICE PILLARS asymmetric 2-col */
   .pillars{background:var(--charcoal);color:#fff}
@@ -192,16 +188,25 @@
   .pillar p{color:rgba(255,255,255,.72);font-size:.95rem}
   .pillar:hover p{color:rgba(255,255,255,.92)}
 
-  /* PACKAGES masonry/alternating */
+  /* PACKAGES grid + grouped */
   .packages{background:var(--offwhite)}
-  .pkg-masonry{columns:3;column-gap:24px}
+  .pkg-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+  .pkg-group-label{
+    grid-column:1/-1;
+    font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);padding:32px 0 12px;border-top:1px solid var(--line);margin-top:8px;
+  }
+  .pkg-group-label:first-child{border-top:0;padding-top:0;margin-top:0}
   .pkg{
     background:var(--warmwhite);border:1px solid var(--line);border-radius:4px;
-    padding:30px 28px;margin-bottom:24px;break-inside:avoid;
-    transition:transform .25s ease,box-shadow .25s ease;
+    padding:30px 28px;
+    transition:all .2s ease;
   }
-  .pkg:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,26,26,.10)}
-  .pkg.feature{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .pkg:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.07);border-color:var(--sage)}
+  .pkg.feature{
+    background:var(--navy);color:#fff;border:1.5px solid var(--sage);
+    box-shadow:0 8px 32px rgba(15,32,64,.18);transform:translateY(-2px);
+  }
   .pkg.feature p,.pkg.feature .pkg-desc{color:rgba(255,255,255,.78)}
   .badge{
     display:inline-block;font-size:.66rem;font-weight:600;letter-spacing:.14em;
@@ -219,8 +224,12 @@
     font-family:'Inter',sans-serif;font-weight:500;font-size:.86rem;
     color:var(--sage);display:inline-flex;align-items:center;gap:8px;
   }
-  .pkg.feature .pkg-cta{color:#9ab8a4}
+  .pkg.feature .pkg-cta{
+    background:var(--sage);color:#fff;padding:10px 20px;border-radius:4px;
+    display:inline-block;font-weight:500;font-size:.86rem;
+  }
   .pkg-cta::after{content:"\2192";transition:transform .25s ease}
+  .pkg.feature .pkg-cta::after{content:""}
   .pkg:hover .pkg-cta::after{transform:translateX(5px)}
 
   /* WHY DIFFERENT */
@@ -235,7 +244,7 @@
   .why-points li::before{content:"\2713";color:var(--sage);font-weight:600}
 
   /* HOW IT WORKS large number */
-  .how{background:var(--warmwhite)}
+  .how{background:#f4f2ee}
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
   .step{padding:34px 26px 34px 0;border-top:2px solid var(--ink);position:relative}
   .step .n{font-family:'DM Serif Display',serif;font-size:3.6rem;color:var(--sage);line-height:1}
@@ -249,11 +258,12 @@
   .who-tags span{
     border:1px solid rgba(255,255,255,.22);padding:11px 18px;border-radius:40px;
     font-size:.9rem;color:rgba(255,255,255,.85);transition:all .25s ease;
+    min-height:44px;display:inline-flex;align-items:center;
   }
   .who-tags span:hover{background:var(--sage);border-color:var(--sage);color:#fff}
 
   /* AI SECTION */
-  .ai{background:var(--offwhite)}
+  .ai{background:var(--warmwhite)}
   .ai-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
   .ai-lead{color:var(--muted);font-size:1.05rem;margin-top:1.4rem}
   .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -274,7 +284,7 @@
   }
 
   /* UX SECTION */
-  .ux{background:var(--warmwhite)}
+  .ux{background:var(--offwhite)}
   .ux-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
   .ux-lead{color:var(--muted);font-size:1.05rem;margin-top:1.4rem}
   .ux-shapes{position:relative;height:320px}
@@ -302,10 +312,10 @@
   .acc:last-child{border-bottom:1px solid var(--line)}
   .acc-q{
     width:100%;background:none;border:0;cursor:pointer;text-align:left;
-    padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;
+    padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;
     font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--ink);
   }
-  .acc-q .ic{flex:0 0 auto;font-size:1.4rem;color:var(--sage);transition:transform .3s ease;font-family:'Inter',sans-serif;font-weight:300}
+  .acc-q .ic{flex:0 0 auto;font-size:1.4rem;color:var(--sage);transition:transform .2s ease;font-family:'Inter',sans-serif;font-weight:300}
   .acc-q[aria-expanded="true"] .ic{transform:rotate(45deg)}
   .acc-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
   .acc-a p{padding:0 0 26px;color:var(--muted);font-size:1rem;max-width:64ch}
@@ -339,13 +349,12 @@
 
   /* RESPONSIVE */
   @media(max-width:980px){
-    .hero-grid{grid-template-columns:1fr;gap:40px;align-items:start}
     .why-grid,.ai-grid,.ux-grid{grid-template-columns:1fr;gap:40px}
-    .pkg-masonry{columns:2}
+    .pkg-masonry{grid-template-columns:repeat(2,1fr)}
     .steps{grid-template-columns:1fr 1fr}
     .out-list{grid-template-columns:1fr}
   }
-  @media(max-width:720px){
+  @media(max-width:767px){
     .nav-links{
       position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
       background:var(--charcoal);flex-direction:column;align-items:flex-start;
@@ -353,14 +362,24 @@
     }
     .nav-links.open{transform:none}
     .nav-links a{color:#fff !important;font-size:1.05rem}
+    nav.scrolled .nav-links a{color:#fff !important}
     .nav-toggle{display:flex;z-index:101}
     .pillar-grid{grid-template-columns:1fr}
     .pillar{border-right:0}
-    .pkg-masonry{columns:1}
+    .pkg-masonry{grid-template-columns:1fr}
     .steps{grid-template-columns:1fr}
-    .pain-list li:nth-child(even){padding-left:24px}
-    section{padding:72px 0}
-    .hero{padding:140px 0 70px}
+    .steps-track{border-left:2px solid var(--line);padding-left:24px;margin-left:20px}
+    .steps-track .step{border-top:0;padding:18px 0}
+    .steps-track .n{margin-left:-45px;background:#f4f2ee;display:inline-block;padding:0 6px}
+    .pain-list li:nth-child(even){margin-left:36px}
+    .ux-shapes{display:none}
+    .ux-grid{grid-template-columns:1fr}
+    section{padding:52px 0}
+    .hero{padding:100px 0 64px}
+  }
+  @media(max-width:640px){
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .foot-grid>*{width:100%}
   }
 </style>
 </head>
@@ -384,40 +403,18 @@
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow light">Digital Growth Consulting</span>
-      <h1>
-        <span class="l l1">Get Found.</span>
-        <span class="l l2">Look Credible.</span>
-        <span class="l l3">Grow Faster.</span>
-      </h1>
-      <p class="hero-sub">We help small businesses and lean teams clean up their digital foundation, improve their website, set up smarter tracking, show up better in search, launch better campaigns, and use AI to move faster.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:hello@example.com">Start with a Digital Growth Audit</a>
-        <a class="btn btn-outline" href="#packages">See Starter Packages</a>
-      </div>
-      <p class="trust-note">Senior analytics, CRO, UX, and marketing strategy support without the bloated agency model.</p>
-    </div>
-    <div class="hero-side">
-      <ul class="hero-bullets">
-        <li>Local SEO, Google Business Profile, and digital setup</li>
-        <li>Website, landing page, UX, and conversion improvements</li>
-        <li>GA4, tracking, dashboards, and marketing performance reporting</li>
-        <li>AI-assisted content, SEO, ads, and go-to-market workflows</li>
-      </ul>
+    <h1>
+      <span class="l l1">Get Found.</span>
+      <span class="l l2">Look Credible.</span>
+      <span class="l l3">Grow Faster.</span>
+    </h1>
+    <p class="hero-sub">We help small businesses and lean teams clean up their digital foundation, improve their website, set up smarter tracking, show up better in search, launch better campaigns, and use AI to move faster.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:hello@example.com">Start with a Digital Growth Audit</a>
+      <a class="btn btn-secondary" href="#packages">See Starter Packages</a>
     </div>
   </div>
 </header>
-
-<div class="cred">
-  <div class="wrap cred-inner">
-    <span>Enterprise Consulting Background</span><span class="dot">&#9670;</span>
-    <span>Analytics-First Strategy</span><span class="dot">&#9670;</span>
-    <span>UX/UI Design and Execution</span><span class="dot">&#9670;</span>
-    <span>AI-Accelerated Workflows</span><span class="dot">&#9670;</span>
-    <span>Small Business Practical</span>
-  </div>
-</div>
 
 <section class="pains reveal">
   <div class="wrap">
@@ -488,6 +485,7 @@
       <p>You don't need to commit to a huge agency contract to start improving your digital presence. Begin with a focused starter package, fix the obvious gaps, and scale into deeper strategy or monthly support when it makes sense.</p>
     </div>
     <div class="pkg-masonry">
+      <div class="pkg-group-label">Starter Packages</div>
       <div class="pkg">
         <span class="badge starter">Low-cost starter</span>
         <h3>Digital Quick Fix</h3>
@@ -506,12 +504,7 @@
         <p class="pkg-desc">GA4 setup, Search Console, GTM basics, form and conversion tracking, UTM setup, Looker Studio dashboard, monthly KPIs.</p>
         <a class="pkg-cta" href="mailto:hello@example.com">Make My Marketing Measurable</a>
       </div>
-      <div class="pkg feature">
-        <span class="badge popular">Most popular</span>
-        <h3>Digital Growth Audit</h3>
-        <p class="pkg-desc">Website UX, analytics, local SEO, GBP, search visibility, social presence, conversion path, competitor scan, prioritized roadmap, 30-day plan.</p>
-        <a class="pkg-cta" href="mailto:hello@example.com">Start with an Audit</a>
-      </div>
+      <div class="pkg-group-label">Focused Sprints</div>
       <div class="pkg">
         <span class="badge sprint">Focused sprint</span>
         <h3>Website Lead Generation Sprint</h3>
@@ -523,6 +516,13 @@
         <h3>SEO and AI Search Sprint</h3>
         <p class="pkg-desc">Keyword research, local SEO, GBP optimization plan, service page map, FAQ strategy, AEO recommendations, content ideas, competitor scan.</p>
         <a class="pkg-cta" href="mailto:hello@example.com">Improve My Visibility</a>
+      </div>
+      <div class="pkg-group-label">Growth Packages</div>
+      <div class="pkg feature">
+        <span class="badge popular">Most popular</span>
+        <h3>Digital Growth Audit</h3>
+        <p class="pkg-desc">Website UX, analytics, local SEO, GBP, search visibility, social presence, conversion path, competitor scan, prioritized roadmap, 30-day plan.</p>
+        <a class="pkg-cta" href="mailto:hello@example.com">Start with an Audit</a>
       </div>
       <div class="pkg">
         <span class="badge growth">Growth package</span>
@@ -536,6 +536,7 @@
         <p class="pkg-desc">Google and Meta Ads setup guidance, pixel and conversion tracking, campaign structure, starter ad copy, audience and keyword recs, landing page strategy, UTM setup, reporting dashboard.</p>
         <a class="pkg-cta" href="mailto:hello@example.com">Launch Smarter Ads</a>
       </div>
+      <div class="pkg-group-label">Monthly Support</div>
       <div class="pkg">
         <span class="badge monthly">Monthly support</span>
         <h3>Monthly Digital Growth Partner</h3>
@@ -571,7 +572,7 @@
       <span class="eyebrow">The Engagement</span>
       <h2>A Clear Path From Diagnosis to Results</h2>
     </div>
-    <div class="steps">
+    <div class="steps steps-track">
       <div class="step">
         <div class="n">01</div>
         <h3>Diagnose</h3>
@@ -703,13 +704,9 @@
       <li><span class="on">01</span>A Google Business Profile that is complete, optimized, and easier to find</li>
       <li><span class="on">02</span>A website that clearly explains what the business does and how to take action</li>
       <li><span class="on">03</span>Tracking that shows where leads and sales are coming from</li>
-      <li><span class="on">04</span>A dashboard that makes performance easier to understand</li>
-      <li><span class="on">05</span>A prioritized roadmap instead of a random list of marketing ideas</li>
-      <li><span class="on">06</span>Landing pages built around clear offers and stronger CTAs</li>
-      <li><span class="on">07</span>SEO and AEO content ideas that match what customers are actually searching</li>
-      <li><span class="on">08</span>AI workflows that make content and campaign planning faster</li>
-      <li><span class="on">09</span>Ad accounts set up with cleaner tracking and better structure</li>
-      <li><span class="on">10</span>Monthly recommendations that keep the business moving forward</li>
+      <li><span class="on">04</span>A prioritized roadmap instead of a random list of marketing ideas</li>
+      <li><span class="on">05</span>SEO and AEO content ideas that match what customers are actually searching</li>
+      <li><span class="on">06</span>AI workflows that make content and campaign planning faster</li>
     </ul>
   </div>
 </section>
@@ -798,7 +795,7 @@
 <script>
   // Sticky nav background on scroll
   var nav=document.getElementById('nav');
-  function onScroll(){ if(window.scrollY>40){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');} }
+  function onScroll(){ if(window.scrollY>60){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');} }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   // Mobile nav toggle
