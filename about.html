@@ -7,7 +7,7 @@
 <meta name="description" content="Peter Cline is a digital growth consultant with 11+ years of marketing experience including 7 years of enterprise analytics, CRO, and UX consulting for Fortune 100 companies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --charcoal:#1a1a1a;
@@ -21,135 +21,149 @@
     --line:#dedcd5;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{scroll-behavior:smooth;scroll-padding-top:96px}
   body{font-family:'Inter',system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.05}
-  h2{line-height:1.1;letter-spacing:-.02em}
+  h2{line-height:1.08;letter-spacing:-.02em}
   a{color:inherit;text-decoration:none}
   ul{list-style:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-  .eyebrow{font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);display:inline-block;margin-bottom:1.4rem}
-  .eyebrow.light{color:#9ab8a4}
+  .kicker{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 
   /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .2s ease,box-shadow .2s ease,padding .35s ease;padding:22px 0}
   nav.scrolled{background:var(--warmwhite);box-shadow:0 1px 0 var(--line);padding:14px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
-  .brand{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;transition:color .2s ease;letter-spacing:.01em}
-  nav.scrolled .brand{color:var(--charcoal)}
+  .brand{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--charcoal);letter-spacing:.01em}
   .nav-links{display:flex;gap:34px;align-items:center}
-  .nav-links a{font-size:.86rem;font-weight:400;color:rgba(255,255,255,.82);transition:color .2s ease}
-  nav.scrolled .nav-links a{color:var(--charcoal)}
+  .nav-links a{font-size:.86rem;font-weight:400;color:var(--charcoal);transition:color .2s ease}
   .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--sage)}
-  nav.scrolled .nav-links a[aria-current="page"]{color:var(--sage)}
-  .nav-cta{background:var(--sage);color:#fff !important;padding:10px 20px;border-radius:2px;font-weight:500}
-  .nav-cta:hover{background:var(--sage-dark) !important}
+  .nav-cta{background:var(--sage);color:#fff !important;padding:10px 22px;border-radius:99px;font-weight:500}
+  .nav-cta:hover{background:var(--sage-dark) !important;color:#fff !important}
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
-  .nav-toggle span{width:24px;height:2px;background:#fff;transition:background .2s}
-  nav.scrolled .nav-toggle span{background:var(--charcoal)}
+  .nav-toggle span{width:24px;height:2px;background:var(--charcoal);transition:background .2s}
 
-  /* BUTTONS */
-  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.02em;cursor:pointer;border:1px solid transparent;text-decoration:none}
-  .btn-primary{background:var(--sage);color:#fff;padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
-  .btn-primary:hover{background:var(--sage-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,124,89,.3)}
-  .btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:14px 28px;border-radius:4px;font-size:.95rem;transition:all .2s}
-  .btn-secondary:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.06)}
-  .btn-outline-dark{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:13px 26px;border-radius:4px;font-size:.9rem;transition:all .2s}
-  .btn-outline-dark:hover{background:var(--ink);color:#fff}
-
-  /* ABOUT HERO */
-  .about-hero{background:var(--charcoal);color:#fff;padding:160px 0 0;position:relative;overflow:hidden}
-  .about-hero::before{content:"";position:absolute;top:-60px;right:-60px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle at center,rgba(74,124,89,.2),transparent 65%)}
-  .ah-layout{display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:end;position:relative;z-index:2}
-  .ah-text{padding-bottom:72px}
-  .ah-text h1{font-size:clamp(3rem,7.5vw,6rem);letter-spacing:-.02em;line-height:.96}
-  .ah-text h1 .sub-name{display:block;font-size:clamp(1.4rem,3vw,2.2rem);color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.3em}
-  .ah-lead{margin-top:2rem;font-size:1.1rem;color:rgba(255,255,255,.72);max-width:48ch;line-height:1.72}
-  .ah-photo-col{align-self:end}
+  /* MASTHEAD */
+  .about-hero{background:linear-gradient(180deg,#f4f1ea 0%,var(--offwhite) 100%);padding:168px 0 0;border-bottom:1px solid var(--line)}
+  .ah-layout{display:grid;grid-template-columns:1fr 320px;gap:72px;align-items:end}
+  .ah-text{padding-bottom:64px}
+  .ah-role{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:1.8rem}
+  .ah-text h1{font-size:clamp(3.4rem,10vw,7.5rem);letter-spacing:-.03em;line-height:.94;color:var(--charcoal)}
+  .ah-text h1 em{font-style:italic;color:var(--sage)}
+  .ah-lead{margin-top:2rem;font-size:1.1rem;color:var(--muted);max-width:48ch;line-height:1.75}
+  .ah-photo-col{align-self:end;padding-bottom:64px}
   .ah-photo{width:100%;aspect-ratio:3/4;background:var(--navy);position:relative;overflow:hidden}
   .ah-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,124,89,.3) 0%,rgba(15,32,64,.6) 100%)}
-  .ah-photo-initials{position:absolute;bottom:28px;left:28px;font-family:'DM Serif Display',serif;font-size:4.5rem;color:rgba(255,255,255,.14);line-height:1;letter-spacing:-.04em}
-  .ah-photo-label{position:absolute;bottom:24px;right:24px;text-align:right}
-  .ah-photo-label .name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#fff}
-  .ah-photo-label .title{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
+  .ah-photo-initials{position:absolute;top:24px;left:24px;font-family:'DM Serif Display',serif;font-size:5rem;color:rgba(255,255,255,.16);line-height:1;letter-spacing:-.04em}
+  .ah-photo-caption{position:absolute;bottom:20px;left:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);line-height:1.8;border-top:1px solid rgba(255,255,255,.25);padding-top:12px}
 
-  /* SECTION BASE */
-  section{padding:96px 0}
-  .sec-head{max-width:58ch;margin-bottom:3rem}
-  .sec-head h2{font-size:clamp(2rem,4.4vw,3.2rem)}
-  .sec-head p{margin-top:1.2rem;color:var(--muted);font-size:1.04rem;max-width:54ch;line-height:1.7}
-
-  /* BIO / STORY */
-  .bio-section{background:var(--warmwhite)}
-  .bio-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-  .bio-col h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:2rem}
-  .bio-col p{font-size:1.04rem;color:var(--muted);line-height:1.8;margin-bottom:1.4rem;max-width:52ch}
+  /* BIO */
+  .bio-section{background:var(--warmwhite);padding:108px 0}
+  .bio-layout{display:grid;grid-template-columns:minmax(180px,.55fr) 1.45fr;gap:64px;align-items:start}
+  .bio-side{position:sticky;top:120px}
+  .bio-side .kicker{display:block;margin-bottom:1.2rem}
+  .bio-side h2{font-size:clamp(2rem,4.2vw,3rem);max-width:9ch}
+  .bio-col p{font-size:1.04rem;color:var(--muted);line-height:1.8;margin-bottom:1.4rem;max-width:58ch}
   .bio-col p:last-of-type{margin-bottom:0}
-  .bio-quote{padding:32px 0 32px 24px;border-left:3px solid var(--sage);margin:2.4rem 0}
-  .bio-quote blockquote{font-family:'DM Serif Display',serif;font-size:1.45rem;color:var(--ink);line-height:1.35;font-style:italic}
-  .bio-quote cite{display:block;margin-top:12px;font-size:.82rem;font-style:normal;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-  .bio-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
-  .bio-stat{padding:28px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .bio-stat:nth-child(2n){border-right:0}
-  .bio-stat:nth-last-child(-n+2){border-bottom:0}
-  .bio-stat .n{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--sage);line-height:1;margin-bottom:6px;letter-spacing:-.02em}
-  .bio-stat .d{font-size:.82rem;color:var(--muted);line-height:1.5;letter-spacing:.02em}
+  .bio-quote{padding:40px 0;margin:2.6rem 0;border-top:1px solid var(--charcoal);border-bottom:1px solid var(--charcoal)}
+  .bio-quote blockquote{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.3;font-style:italic;letter-spacing:-.01em}
+  .bio-quote cite{display:block;margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-style:normal;color:var(--sage);letter-spacing:.18em;text-transform:uppercase}
 
-  /* EXPERTISE */
-  .expertise-section{background:var(--charcoal);color:#fff}
-  .expertise-section .sec-head h2{color:#fff}
-  .expertise-section .sec-head p{color:rgba(255,255,255,.65)}
-  .exp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.12)}
-  .exp-block{padding:36px 32px 36px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-  .exp-block:nth-child(3n){padding-right:0}
-  .exp-block:nth-child(3n-1),.exp-block:nth-child(3n-2){padding-right:32px;border-right:1px solid rgba(255,255,255,.12)}
-  .exp-block h3{font-size:1.2rem;color:#fff;margin-bottom:16px}
-  .exp-block ul{display:flex;flex-direction:column;gap:6px}
-  .exp-block ul li{font-size:.86rem;color:rgba(255,255,255,.62);display:flex;gap:10px;align-items:flex-start}
-  .exp-block ul li::before{content:"";flex:0 0 auto;width:5px;height:5px;background:var(--sage);border-radius:50%;margin-top:.52em}
+  /* STATS BAND */
+  .stats-band{background:var(--charcoal);color:#fff;padding:84px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:8px 32px;border-left:1px solid rgba(255,255,255,.18)}
+  .stat:first-child{border-left:0;padding-left:0}
+  .stat .n{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:clamp(2.6rem,5vw,4rem);color:#9ab8a4;line-height:1;letter-spacing:-.04em;display:block;margin-bottom:14px;font-variant-numeric:tabular-nums}
+  .stat .d{font-family:'DM Serif Display',serif;font-size:1.02rem;color:rgba(255,255,255,.75);line-height:1.45;max-width:22ch}
 
-  /* PLATFORM TAGS */
-  .platforms-section{background:var(--navy);color:#fff}
-  .platforms-section .sec-head h2{color:#fff}
-  .platforms-section .sec-head p{color:rgba(255,255,255,.65)}
-  .platform-cats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px 48px}
-  .platform-cat h4{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:14px}
+  /* EXPERTISE ACCORDION */
+  .expertise-section{background:var(--offwhite);padding:112px 0}
+  .exp-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:1.2rem}
+  .exp-head h2{font-size:clamp(2rem,4.6vw,3.4rem)}
+  .exp-head .kicker{color:var(--muted)}
+  .exp-intro{color:var(--muted);max-width:54ch;font-size:1.02rem;line-height:1.7;margin-bottom:3rem}
+  .exp-acc{border-top:1px solid var(--charcoal)}
+  .exp-row{border-bottom:1px solid var(--line)}
+  .exp-q{width:100%;background:none;border:0;cursor:pointer;text-align:left;padding:26px 6px;display:flex;align-items:center;gap:26px;position:relative;overflow:hidden;isolation:isolate;transition:color .25s}
+  .exp-q::before{content:"";position:absolute;inset:0;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.65,0,.35,1);z-index:-1}
+  .exp-q:hover::before,.exp-q:focus-visible::before{transform:scaleX(1)}
+  .exp-q:hover,.exp-q:focus-visible{color:#fff}
+  .exp-q .xn{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.16em;color:var(--sage);flex:0 0 56px;transition:color .25s}
+  .exp-q:hover .xn,.exp-q:focus-visible .xn{color:#fff}
+  .exp-q .xt{font-family:'DM Serif Display',serif;font-size:clamp(1.3rem,2.6vw,1.9rem);letter-spacing:-.01em}
+  .exp-q .ic{margin-left:auto;font-size:1.4rem;font-family:'Inter',sans-serif;font-weight:300;color:var(--sage);transition:transform .25s,color .25s}
+  .exp-q:hover .ic{color:#fff}
+  .exp-q[aria-expanded="true"] .ic{transform:rotate(45deg)}
+  .exp-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .exp-a ul{padding:6px 6px 30px 82px;columns:2;column-gap:48px}
+  .exp-a ul li{font-size:.92rem;color:var(--muted);padding:5px 0;display:flex;gap:11px;align-items:flex-start;break-inside:avoid}
+  .exp-a ul li::before{content:"";flex:0 0 auto;width:6px;height:6px;background:var(--sage);margin-top:.55em}
+
+  /* PLATFORMS */
+  .platforms-section{background:var(--navy);color:#fff;padding:104px 0}
+  .plat-head{margin-bottom:3.4rem;max-width:60ch}
+  .plat-head .kicker{color:#9ab8a4;display:block;margin-bottom:1.2rem}
+  .plat-head h2{font-size:clamp(2rem,4.4vw,3.2rem);color:#fff}
+  .plat-head p{margin-top:1.2rem;color:rgba(255,255,255,.65);font-size:1.02rem;line-height:1.7}
+  .platform-cats{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.2)}
+  .platform-cat{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:start}
+  .platform-cat:nth-child(even){grid-template-columns:1fr 220px}
+  .platform-cat:nth-child(even) .pc-label{order:2;text-align:right}
+  .platform-cat:nth-child(even) .ptag-list{order:1;justify-content:flex-start}
+  .pc-label{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#9ab8a4;font-weight:500;padding-top:8px}
   .ptag-list{display:flex;flex-wrap:wrap;gap:8px}
-  .ptag{font-size:.82rem;border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:2px;color:rgba(255,255,255,.8)}
+  .ptag{font-size:.82rem;border:1px solid rgba(255,255,255,.25);padding:7px 14px;color:rgba(255,255,255,.85);transition:border-color .2s,background .2s}
+  .ptag:hover{border-color:var(--sage);background:rgba(74,124,89,.25)}
 
-  /* WHO WE SERVE */
-  .clients-section{background:#f4f2ee}
-  .clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-  .client-type{padding:24px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .client-type h4{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:8px}
-  .client-type p{font-size:.8rem;color:var(--muted);line-height:1.5}
-
-  /* RESULTS SECTION */
-  .results-section{background:var(--offwhite);padding:88px 0}
-  .results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
-  .result-card{border:1px solid var(--line);border-radius:4px;padding:28px;background:var(--warmwhite)}
-  .res-metric{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--sage);line-height:1;display:block;margin-bottom:6px}
-  .res-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:16px}
-  .res-desc{font-size:.9rem;color:var(--muted);line-height:1.7}
+  /* RESULTS */
+  .results-section{background:var(--warmwhite);padding:108px 0}
+  .res-head{margin-bottom:3.6rem}
+  .res-head .kicker{display:block;margin-bottom:1.2rem}
+  .res-head h2{font-size:clamp(2rem,4.4vw,3.2rem);max-width:20ch}
+  .results-list{display:flex;flex-direction:column}
+  .result-item{display:grid;grid-template-columns:minmax(180px,.7fr) 1fr 1.1fr;gap:40px;align-items:baseline;padding:38px 0;border-top:1px solid var(--charcoal)}
+  .result-item:nth-child(2){padding-left:6%}
+  .result-item:nth-child(3){padding-left:12%}
+  .res-metric{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:clamp(2.8rem,6.5vw,4.6rem);color:var(--sage);line-height:1;letter-spacing:-.05em;white-space:nowrap}
+  .res-label{font-family:'DM Serif Display',serif;font-size:1.35rem;line-height:1.25;letter-spacing:-.01em}
+  .res-desc{font-size:.92rem;color:var(--muted);line-height:1.7}
 
   /* PHILOSOPHY */
-  .philosophy-section{background:var(--warmwhite)}
-  .phil-layout{max-width:820px}
-  .phil-layout h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:2.4rem}
-  .phil-points{display:flex;flex-direction:column;gap:0}
-  .phil-point{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line);align-items:flex-start}
-  .phil-point:first-child{border-top:1px solid var(--line)}
-  .phil-n{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--sage);line-height:1}
-  .phil-text h3{font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:6px}
-  .phil-text p{font-size:.92rem;color:var(--muted);line-height:1.7;max-width:56ch}
+  .philosophy-section{background:#f1eee7;padding:116px 0}
+  .phil-layout{max-width:900px;margin-left:auto;padding-left:80px}
+  .phil-layout .kicker{display:block;margin-bottom:1.2rem}
+  .phil-layout h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:3.4rem}
+  .phil-point{position:relative;padding:34px 0 34px 0;border-top:1px solid var(--line)}
+  .phil-point:first-of-type{border-top:1px solid var(--charcoal)}
+  .phil-n{position:absolute;left:-100px;top:18px;font-family:'DM Serif Display',serif;font-size:clamp(3rem,6vw,4.6rem);color:var(--sage);line-height:1;letter-spacing:-.04em;opacity:.85}
+  .phil-text h3{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:10px;letter-spacing:-.01em}
+  .phil-text p{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:56ch}
+
+  /* WHO WE SERVE */
+  .clients-section{background:var(--offwhite);padding:100px 0}
+  .clients-layout{display:grid;grid-template-columns:minmax(200px,.7fr) 1.6fr;gap:64px;align-items:start}
+  .clients-side .kicker{display:block;margin-bottom:1.2rem}
+  .clients-side h2{font-size:clamp(1.9rem,4vw,2.8rem);max-width:13ch}
+  .clients-side p{margin-top:1.2rem;color:var(--muted);font-size:.98rem;line-height:1.7;max-width:34ch}
+  .clients-list{border-top:1px solid var(--charcoal)}
+  .client-row{display:grid;grid-template-columns:48px minmax(160px,.8fr) 1.4fr;gap:24px;align-items:baseline;padding:24px 4px;border-bottom:1px solid var(--line)}
+  .client-row .cn{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;color:var(--sage)}
+  .client-row h4{font-family:'DM Serif Display',serif;font-size:1.25rem;letter-spacing:-.01em}
+  .client-row p{font-size:.88rem;color:var(--muted);line-height:1.6}
 
   /* FINAL CTA */
-  .final{background:var(--charcoal);color:#fff;text-align:center;position:relative;overflow:hidden;padding:110px 0}
-  .final::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,89,.2),transparent 62%)}
-  .final-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
-  .final h2{font-size:clamp(2.2rem,5vw,3.6rem)}
-  .final p{margin-top:1.4rem;color:rgba(255,255,255,.7);font-size:1.04rem;line-height:1.7}
-  .final-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:2.4rem}
+  .final{background:var(--charcoal);color:#fff;padding:120px 0}
+  .final-split{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:center}
+  .final h2{font-size:clamp(2.4rem,5.6vw,4.2rem);letter-spacing:-.02em}
+  .final h2 em{font-style:italic;color:#9ab8a4}
+  .final .final-sub{margin-top:1.6rem;color:rgba(255,255,255,.66);font-size:1.02rem;line-height:1.7;max-width:42ch}
+  .notecard{background:var(--warmwhite);color:var(--ink);border:1px solid var(--line);padding:34px 32px;box-shadow:10px 10px 0 0 rgba(74,124,89,.35)}
+  .notecard .nc-line{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--muted);padding:11px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+  .notecard .nc-line b{font-weight:500;color:var(--charcoal)}
+  .notecard .btn-mail{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--sage);color:#fff;padding:14px 26px;font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;transition:background .2s}
+  .notecard .btn-mail:hover{background:var(--sage-dark)}
+  .notecard .micro{display:block;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
   /* FOOTER */
   footer{background:var(--navy);color:#fff;padding:64px 0 34px}
@@ -158,44 +172,60 @@
   .foot-grid p{color:rgba(255,255,255,.65);font-size:.9rem;max-width:34ch;line-height:1.65}
   .foot-email-link{color:rgba(255,255,255,.65);font-size:.88rem;display:block;margin-top:10px;transition:color .2s}
   .foot-email-link:hover{color:#fff}
-  .foot-grid h4{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#9ab8a4;font-weight:600;margin-bottom:14px}
+  .foot-grid h4{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#9ab8a4;font-weight:500;margin-bottom:14px}
   .foot-grid ul li{margin-bottom:9px}
   .foot-grid ul li a{color:rgba(255,255,255,.75);font-size:.9rem;transition:color .2s}
   .foot-grid ul li a:hover{color:#fff}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;font-size:.8rem;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 
   /* ANIMATIONS */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-  .reveal.in{opacity:1;transform:none}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+  .reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+  .reveal-fade{opacity:0;transition:opacity .9s ease}
+  .reveal.in,.reveal-left.in,.reveal-fade.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
+    .reveal,.reveal-left,.reveal-fade{opacity:1;transform:none}
+  }
 
   /* RESPONSIVE */
   @media(max-width:980px){
     .ah-layout{grid-template-columns:1fr;gap:0}
     .ah-photo-col{display:none}
-    .ah-text{padding-bottom:80px}
-    .bio-layout{grid-template-columns:1fr;gap:48px}
-    .exp-grid{grid-template-columns:1fr 1fr}
-    .exp-block:nth-child(3n){padding-right:32px;border-right:1px solid rgba(255,255,255,.12)}
-    .exp-block:nth-child(2n){padding-right:0;border-right:0}
-    .platform-cats{grid-template-columns:1fr 1fr}
-    .clients-grid{grid-template-columns:repeat(3,1fr)}
-    .results-grid{grid-template-columns:1fr 1fr}
+    .bio-layout,.clients-layout{grid-template-columns:1fr;gap:36px}
+    .bio-side{position:static}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:40px 0}
+    .stat:nth-child(odd){border-left:0;padding-left:0}
+    .exp-a ul{columns:1;padding-left:62px}
+    .platform-cat,.platform-cat:nth-child(even){grid-template-columns:1fr}
+    .platform-cat:nth-child(even) .pc-label{order:0;text-align:left}
+    .platform-cat:nth-child(even) .ptag-list{order:1}
+    .result-item{grid-template-columns:1fr;gap:14px}
+    .result-item:nth-child(2),.result-item:nth-child(3){padding-left:0}
+    .phil-layout{padding-left:0;margin-left:0}
+    .phil-n{position:static;display:block;margin-bottom:10px}
+    .final-split{grid-template-columns:1fr;gap:48px}
   }
   @media(max-width:767px){
     .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;background:var(--charcoal);flex-direction:column;align-items:flex-start;padding:96px 32px;gap:26px;transform:translateX(100%);transition:transform .35s ease;z-index:99}
     .nav-links.open{transform:none}
     .nav-links a{color:#fff !important;font-size:1.05rem}
+    .nav-cta{color:#fff !important}
     .nav-toggle{display:flex;z-index:101}
-    .exp-grid{grid-template-columns:1fr}
-    .platform-cats{grid-template-columns:1fr}
-    .clients-grid{grid-template-columns:1fr 1fr}
-    .bio-stats{grid-template-columns:1fr 1fr}
-    .results-grid{grid-template-columns:1fr}
-    section{padding:64px 0}
+    .about-hero{padding-top:138px}
+    .bio-section,.expertise-section,.platforms-section,.results-section,.philosophy-section,.clients-section{padding:64px 0}
+    .stats-band{padding:56px 0}
+    .stats-grid{grid-template-columns:1fr;gap:32px}
+    .stat{border-left:0;padding:0}
+    .exp-q{gap:16px}
+    .exp-q .xn{flex-basis:42px}
+    .exp-a ul{padding-left:6px}
+    .client-row{grid-template-columns:1fr;gap:6px}
+    .final{padding:80px 0}
     .foot-grid{grid-template-columns:1fr 1fr;gap:28px}
   }
   @media(max-width:480px){
-    .clients-grid{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr}
   }
 </style>
@@ -221,29 +251,26 @@
 <header class="about-hero">
   <div class="wrap ah-layout">
     <div class="ah-text">
-      <span class="eyebrow light">About</span>
-      <h1>
-        <span class="sub-name">Peter Cline</span>
-        Digital Growth Consultant
-      </h1>
+      <span class="ah-role">Digital Growth Consultant / Founder</span>
+      <h1>Peter <em>Cline</em></h1>
       <p class="ah-lead">Over a decade of marketing experience. Seven years building analytics, experimentation, and conversion programs for Fortune 100 companies. Now applying that same rigorous thinking to businesses that deserve it.</p>
     </div>
     <div class="ah-photo-col">
       <div class="ah-photo">
         <div class="ah-photo-initials">PC</div>
-        <div class="ah-photo-label">
-          <div class="name">Peter Cline</div>
-          <div class="title">Digital Growth Consultant</div>
-        </div>
+        <div class="ah-photo-caption">Peter Cline<br>Digital Growth Consultant / Fort Worth, TX</div>
       </div>
     </div>
   </div>
 </header>
 
-<section class="bio-section reveal">
+<section class="bio-section">
   <div class="wrap bio-layout">
-    <div class="bio-col">
+    <div class="bio-side reveal-left">
+      <span class="kicker">01 / The Story</span>
       <h2>The Background</h2>
+    </div>
+    <div class="bio-col reveal">
       <p>I spent the first part of my career inside enterprise digital analytics, working with some of the largest companies in the world to measure, understand, and improve their digital experiences. That meant building GA and GA360 implementations, designing A/B testing programs, creating CRO roadmaps, building executive dashboards, and doing the kind of deep UX analysis that changes how organizations make decisions.</p>
       <p>The work was meaningful, but it was also inaccessible. The enterprise model, with its contracts, overhead, and specialized teams, meant that smaller businesses never got access to that level of thinking.</p>
       <div class="bio-quote">
@@ -252,117 +279,132 @@
       </div>
       <p>Cline Digital Growth is how I make that accessible. Same strategic rigor. Same analytical discipline. Different pricing model.</p>
     </div>
-    <div>
-      <div class="bio-stats">
-        <div class="bio-stat">
-          <div class="n">11+</div>
-          <div class="d">Years of marketing and digital strategy experience</div>
+  </div>
+</section>
+
+<section class="stats-band" id="stats">
+  <div class="wrap">
+    <div class="stats-grid reveal-fade">
+      <div class="stat">
+        <span class="n" data-count="11" data-suffix="+">11+</span>
+        <span class="d">Years of marketing and digital strategy experience</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count="7">7</span>
+        <span class="d">Years enterprise analytics, CRO, and insights consulting</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count="100" data-prefix="F">F100</span>
+        <span class="d">Fortune 100 clients served across multiple industries</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count="6">6</span>
+        <span class="d">Service areas from local SEO to AI marketing systems</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="expertise-section" id="expertise">
+  <div class="wrap">
+    <div class="exp-head reveal">
+      <h2>Where the experience runs deep</h2>
+      <span class="kicker">02 / Core Expertise</span>
+    </div>
+    <p class="exp-intro reveal">Each of these areas reflects genuine, hands-on experience, not generalist advice pulled from a playbook.</p>
+    <div class="exp-acc reveal-fade">
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.01</span><span class="xt">Digital Analytics</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>GA4 and Google Analytics 360 implementation</li>
+            <li>Google Tag Manager architecture</li>
+            <li>Conversion and event tracking strategy</li>
+            <li>UTM frameworks and source attribution</li>
+            <li>Looker Studio dashboards and reporting</li>
+            <li>Analytics audits and data governance</li>
+          </ul>
         </div>
-        <div class="bio-stat">
-          <div class="n">7</div>
-          <div class="d">Years enterprise analytics, CRO, and insights consulting</div>
+      </div>
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.02</span><span class="xt">CRO &amp; Experimentation</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>A/B and multivariate test design</li>
+            <li>Optimizely, VWO, and Adobe Target</li>
+            <li>Conversion funnel analysis</li>
+            <li>Session recording and heatmap analysis</li>
+            <li>CRO roadmap development</li>
+            <li>Executive readouts and stakeholder reporting</li>
+          </ul>
         </div>
-        <div class="bio-stat">
-          <div class="n">F100</div>
-          <div class="d">Fortune 100 clients served across multiple industries</div>
+      </div>
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.03</span><span class="xt">UX / UI Design</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>UX audits and heuristic evaluation</li>
+            <li>Wireframes and interaction design</li>
+            <li>Figma prototyping and design systems</li>
+            <li>Landing page and conversion design</li>
+            <li>Mobile-first layout design</li>
+            <li>Front-end-ready design handoff</li>
+          </ul>
         </div>
-        <div class="bio-stat">
-          <div class="n">6</div>
-          <div class="d">Service areas from local SEO to AI marketing systems</div>
+      </div>
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.04</span><span class="xt">SEO &amp; Search Strategy</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>Local SEO and Google Business Profile</li>
+            <li>Keyword research and content strategy</li>
+            <li>Answer Engine Optimization (AEO)</li>
+            <li>Technical SEO fundamentals</li>
+            <li>Search Console and rank tracking</li>
+            <li>Competitive search analysis</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.05</span><span class="xt">Paid Media &amp; Campaigns</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>Google Ads campaign structure and setup</li>
+            <li>Meta Ads strategy and pixel setup</li>
+            <li>Landing page strategy for paid traffic</li>
+            <li>Ad copy development</li>
+            <li>Audience segmentation and targeting</li>
+            <li>Campaign performance dashboards</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-row">
+        <button class="exp-q" aria-expanded="false"><span class="xn">A.06</span><span class="xt">AI Marketing Systems</span><span class="ic">+</span></button>
+        <div class="exp-a">
+          <ul>
+            <li>AI workflow design and documentation</li>
+            <li>Prompt engineering for marketing use cases</li>
+            <li>Content calendar and SEO brief automation</li>
+            <li>Brand voice development for AI tools</li>
+            <li>Review and competitive intelligence</li>
+            <li>Repeatable go-to-market workflows</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="expertise-section reveal">
+<section class="platforms-section" id="platforms">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">Core Expertise</span>
-      <h2>Where the Experience Runs Deep</h2>
-      <p>Each of these areas reflects genuine, hands-on experience, not generalist advice pulled from a playbook.</p>
-    </div>
-    <div class="exp-grid">
-      <div class="exp-block">
-        <h3>Digital Analytics</h3>
-        <ul>
-          <li>GA4 and Google Analytics 360 implementation</li>
-          <li>Google Tag Manager architecture</li>
-          <li>Conversion and event tracking strategy</li>
-          <li>UTM frameworks and source attribution</li>
-          <li>Looker Studio dashboards and reporting</li>
-          <li>Analytics audits and data governance</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <h3>CRO &amp; Experimentation</h3>
-        <ul>
-          <li>A/B and multivariate test design</li>
-          <li>Optimizely, VWO, and Adobe Target</li>
-          <li>Conversion funnel analysis</li>
-          <li>Session recording and heatmap analysis</li>
-          <li>CRO roadmap development</li>
-          <li>Executive readouts and stakeholder reporting</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <h3>UX / UI Design</h3>
-        <ul>
-          <li>UX audits and heuristic evaluation</li>
-          <li>Wireframes and interaction design</li>
-          <li>Figma prototyping and design systems</li>
-          <li>Landing page and conversion design</li>
-          <li>Mobile-first layout design</li>
-          <li>Front-end-ready design handoff</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <h3>SEO &amp; Search Strategy</h3>
-        <ul>
-          <li>Local SEO and Google Business Profile</li>
-          <li>Keyword research and content strategy</li>
-          <li>Answer Engine Optimization (AEO)</li>
-          <li>Technical SEO fundamentals</li>
-          <li>Search Console and rank tracking</li>
-          <li>Competitive search analysis</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <h3>Paid Media &amp; Campaigns</h3>
-        <ul>
-          <li>Google Ads campaign structure and setup</li>
-          <li>Meta Ads strategy and pixel setup</li>
-          <li>Landing page strategy for paid traffic</li>
-          <li>Ad copy development</li>
-          <li>Audience segmentation and targeting</li>
-          <li>Campaign performance dashboards</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <h3>AI Marketing Systems</h3>
-        <ul>
-          <li>AI workflow design and documentation</li>
-          <li>Prompt engineering for marketing use cases</li>
-          <li>Content calendar and SEO brief automation</li>
-          <li>Brand voice development for AI tools</li>
-          <li>Review and competitive intelligence</li>
-          <li>Repeatable go-to-market workflows</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="platforms-section reveal">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow light">Platforms &amp; Tools</span>
-      <h2>Worked With at an Expert Level</h2>
+    <div class="plat-head reveal">
+      <span class="kicker">03 / Platforms &amp; Tools</span>
+      <h2>Worked with at an expert level</h2>
       <p>These are the tools used on real enterprise and small business engagements, not vendor certifications collected for a resume.</p>
     </div>
-    <div class="platform-cats">
+    <div class="platform-cats reveal-fade">
       <div class="platform-cat">
-        <h4>Analytics</h4>
+        <span class="pc-label">Analytics</span>
         <div class="ptag-list">
           <span class="ptag">Google Analytics 4</span>
           <span class="ptag">Google Analytics 360</span>
@@ -372,7 +414,7 @@
         </div>
       </div>
       <div class="platform-cat">
-        <h4>CRO &amp; UX Research</h4>
+        <span class="pc-label">CRO &amp; UX Research</span>
         <div class="ptag-list">
           <span class="ptag">Optimizely</span>
           <span class="ptag">VWO</span>
@@ -383,7 +425,7 @@
         </div>
       </div>
       <div class="platform-cat">
-        <h4>Design</h4>
+        <span class="pc-label">Design</span>
         <div class="ptag-list">
           <span class="ptag">Figma</span>
           <span class="ptag">Figma Prototyping</span>
@@ -392,7 +434,7 @@
         </div>
       </div>
       <div class="platform-cat">
-        <h4>Paid Media &amp; SEO</h4>
+        <span class="pc-label">Paid Media &amp; SEO</span>
         <div class="ptag-list">
           <span class="ptag">Google Ads</span>
           <span class="ptag">Meta Ads Manager</span>
@@ -402,7 +444,7 @@
         </div>
       </div>
       <div class="platform-cat">
-        <h4>AI &amp; Automation</h4>
+        <span class="pc-label">AI &amp; Automation</span>
         <div class="ptag-list">
           <span class="ptag">Claude</span>
           <span class="ptag">ChatGPT</span>
@@ -412,7 +454,7 @@
         </div>
       </div>
       <div class="platform-cat">
-        <h4>Dashboards &amp; Reporting</h4>
+        <span class="pc-label">Dashboards &amp; Reporting</span>
         <div class="ptag-list">
           <span class="ptag">Looker Studio</span>
           <span class="ptag">Executive reporting</span>
@@ -424,57 +466,25 @@
   </div>
 </section>
 
-<section class="clients-section reveal">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Who We Serve</span>
-      <h2>Built for Businesses Across the Board</h2>
-      <p>The enterprise background means this kind of thinking scales down, not just for startups, but for any business that wants to compete smarter online.</p>
-    </div>
-    <div class="clients-grid">
-      <div class="client-type">
-        <h4>Local Services</h4>
-        <p>Contractors, home services, medspas, salons, restaurants, gyms</p>
-      </div>
-      <div class="client-type">
-        <h4>Ecommerce</h4>
-        <p>DTC brands, online retailers, subscription businesses</p>
-      </div>
-      <div class="client-type">
-        <h4>B2B &amp; SaaS</h4>
-        <p>Professional services, SaaS companies, consultancies</p>
-      </div>
-      <div class="client-type">
-        <h4>Agencies</h4>
-        <p>Agencies needing analytics, CRO, or UX expertise for their clients</p>
-      </div>
-      <div class="client-type">
-        <h4>Startups &amp; New Ventures</h4>
-        <p>Early-stage companies building their digital foundation for the first time</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Replace with actual client case studies when available -->
-<section class="results-section reveal">
+<section class="results-section" id="results">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Selected Results</span>
-      <h2>What Gets Better When the Foundation Is Right</h2>
+    <div class="res-head reveal-left">
+      <span class="kicker">04 / Selected Results</span>
+      <h2>What gets better when the foundation is right</h2>
     </div>
-    <div class="results-grid">
-      <div class="result-card">
+    <div class="results-list">
+      <div class="result-item reveal">
         <span class="res-metric">30%</span>
         <span class="res-label">Increase in tracked conversions</span>
         <p class="res-desc">After a GA4 and GTM overhaul for a local services business, tracked form submissions jumped 30% in the first month as previously uncounted micro-conversions became measurable.</p>
       </div>
-      <div class="result-card">
+      <div class="result-item reveal">
         <span class="res-metric">Top 3</span>
         <span class="res-label">Local pack rankings achieved</span>
         <p class="res-desc">A full GBP optimization and local citation cleanup moved a service business from page 2 to a consistent top-3 Google Maps position for their primary service keywords.</p>
       </div>
-      <div class="result-card">
+      <div class="result-item reveal">
         <span class="res-metric">2x</span>
         <span class="res-label">Content output with AI workflows</span>
         <p class="res-desc">An AI marketing engine build gave a small ecommerce brand a repeatable system for producing blog posts, social content, and email campaigns at twice the previous pace.</p>
@@ -483,51 +493,92 @@
   </div>
 </section>
 
-<section class="philosophy-section reveal">
+<section class="philosophy-section" id="philosophy">
   <div class="wrap">
     <div class="phil-layout">
-      <h2>How I Think About This Work</h2>
-      <div class="phil-points">
-        <div class="phil-point">
-          <div class="phil-n">01</div>
-          <div class="phil-text">
-            <h3>Data before opinions</h3>
-            <p>Every recommendation starts with evidence, from analytics, from user behavior, from the numbers that actually tell the story. No guesswork dressed up as strategy.</p>
-          </div>
+      <span class="kicker reveal">05 / Philosophy</span>
+      <h2 class="reveal">How I think about this work</h2>
+      <div class="phil-point reveal">
+        <div class="phil-n">01</div>
+        <div class="phil-text">
+          <h3>Data before opinions</h3>
+          <p>Every recommendation starts with evidence, from analytics, from user behavior, from the numbers that actually tell the story. No guesswork dressed up as strategy.</p>
         </div>
-        <div class="phil-point">
-          <div class="phil-n">02</div>
-          <div class="phil-text">
-            <h3>Fix the foundation first</h3>
-            <p>Most marketing problems aren't marketing problems, they're tracking, UX, or messaging problems. Finding the real cause matters more than applying the obvious fix.</p>
-          </div>
+      </div>
+      <div class="phil-point reveal">
+        <div class="phil-n">02</div>
+        <div class="phil-text">
+          <h3>Fix the foundation first</h3>
+          <p>Most marketing problems aren't marketing problems, they're tracking, UX, or messaging problems. Finding the real cause matters more than applying the obvious fix.</p>
         </div>
-        <div class="phil-point">
-          <div class="phil-n">03</div>
-          <div class="phil-text">
-            <h3>Strategy should be actionable</h3>
-            <p>A roadmap that sits in a Google Doc and never gets executed is not a deliverable. Every engagement ends with something you can actually do next.</p>
-          </div>
+      </div>
+      <div class="phil-point reveal">
+        <div class="phil-n">03</div>
+        <div class="phil-text">
+          <h3>Strategy should be actionable</h3>
+          <p>A roadmap that sits in a Google Doc and never gets executed is not a deliverable. Every engagement ends with something you can actually do next.</p>
         </div>
-        <div class="phil-point">
-          <div class="phil-n">04</div>
-          <div class="phil-text">
-            <h3>Start small, earn trust</h3>
-            <p>You shouldn't have to sign a 12-month contract to find out if someone is worth working with. Low-commitment entry points exist because they should.</p>
-          </div>
+      </div>
+      <div class="phil-point reveal">
+        <div class="phil-n">04</div>
+        <div class="phil-text">
+          <h3>Start small, earn trust</h3>
+          <p>You shouldn't have to sign a 12-month contract to find out if someone is worth working with. Low-commitment entry points exist because they should.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="clients-section" id="clients">
+  <div class="wrap clients-layout">
+    <div class="clients-side reveal-left">
+      <span class="kicker">06 / Who We Serve</span>
+      <h2>Built for businesses across the board</h2>
+      <p>The enterprise background means this kind of thinking scales down, not just for startups, but for any business that wants to compete smarter online.</p>
+    </div>
+    <div class="clients-list reveal-fade">
+      <div class="client-row">
+        <span class="cn">C.01</span>
+        <h4>Local Services</h4>
+        <p>Contractors, home services, medspas, salons, restaurants, gyms</p>
+      </div>
+      <div class="client-row">
+        <span class="cn">C.02</span>
+        <h4>Ecommerce</h4>
+        <p>DTC brands, online retailers, subscription businesses</p>
+      </div>
+      <div class="client-row">
+        <span class="cn">C.03</span>
+        <h4>B2B &amp; SaaS</h4>
+        <p>Professional services, SaaS companies, consultancies</p>
+      </div>
+      <div class="client-row">
+        <span class="cn">C.04</span>
+        <h4>Agencies</h4>
+        <p>Agencies needing analytics, CRO, or UX expertise for their clients</p>
+      </div>
+      <div class="client-row">
+        <span class="cn">C.05</span>
+        <h4>Startups &amp; New Ventures</h4>
+        <p>Early-stage companies building their digital foundation for the first time</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final">
-  <div class="wrap final-inner">
-    <h2>Let's Talk About What You Need</h2>
-    <p>Whether you have a specific problem to solve or you're not sure where to start, the best first step is a conversation. No pitch, no commitment required.</p>
-    <div class="final-actions">
-      <a class="btn btn-primary" href="mailto:peter@clinedigitalgrowth.com">Get in Touch</a>
-      <a class="btn btn-secondary" href="/solutions">See Services and Packages</a>
+  <div class="wrap final-split">
+    <div class="reveal-left">
+      <span class="kicker" style="color:#9ab8a4">Next Step</span>
+      <h2 style="margin-top:1.2rem">Let's talk about <em>what you need.</em></h2>
+      <p class="final-sub">Whether you have a specific problem to solve or you're not sure where to start, the best first step is a conversation. No pitch, no commitment required.</p>
+    </div>
+    <div class="notecard reveal">
+      <div class="nc-line"><b>to:</b> peter@clinedigitalgrowth.com</div>
+      <div class="nc-line"><b>subject:</b> Digital Growth Audit</div>
+      <a class="btn-mail" href="mailto:peter@clinedigitalgrowth.com?subject=Digital%20Growth%20Audit">Open email draft &#8594;</a>
+      <span class="micro">No retainer. No 12-month contract.</span>
     </div>
   </div>
 </section>
@@ -575,21 +626,77 @@
 </footer>
 
 <script>
+(function(){
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   var nav=document.getElementById('nav');
-  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60)}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if(nav){
+    var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>60)};
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  }
+
   var toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
-  toggle.addEventListener('click',function(){
-    var open=links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded',open?'true':'false');
+  if(toggle&&links){
+    toggle.addEventListener('click',function(){
+      var open=links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    links.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}
+    });
+  }
+
+  /* Expertise accordion */
+  document.querySelectorAll('.exp-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var expanded=btn.getAttribute('aria-expanded')==='true';
+      var panel=btn.nextElementSibling;
+      btn.setAttribute('aria-expanded',expanded?'false':'true');
+      if(panel){panel.style.maxHeight=expanded?null:panel.scrollHeight+'px'}
+    });
   });
-  links.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}
-  });
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
-  },{threshold:.08});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  /* Stat count-up */
+  var stats=document.querySelectorAll('.stat .n[data-count]');
+  function animateStat(el){
+    var target=parseInt(el.getAttribute('data-count'),10);
+    if(isNaN(target))return;
+    var prefix=el.getAttribute('data-prefix')||'';
+    var suffix=el.getAttribute('data-suffix')||'';
+    var start=null,dur=1200;
+    function frame(ts){
+      if(start===null)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=prefix+Math.round(target*eased)+suffix;
+      if(p<1)requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if(stats.length){
+    if(reduceMotion||!('IntersectionObserver' in window)){
+      /* leave static values in place */
+    }else{
+      var statIO=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){animateStat(en.target);statIO.unobserve(en.target)}
+        });
+      },{threshold:.4});
+      stats.forEach(function(el){statIO.observe(el)});
+    }
+  }
+
+  /* Reveals */
+  var revealEls=document.querySelectorAll('.reveal,.reveal-left,.reveal-fade');
+  if(reduceMotion||!('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+    },{threshold:.08});
+    revealEls.forEach(function(el){io.observe(el)});
+  }
+})();
 </script>
 </body>
 </html>
